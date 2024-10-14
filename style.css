@@ -31,4 +31,10 @@
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
+}
+
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
