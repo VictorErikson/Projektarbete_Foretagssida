@@ -31,4 +31,7 @@
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
+}
+.video-background main .productsStartpage1 .wrapper .product, .video-background main .productsStartpage2 .wrapper .product {
+  max-width: 20%;
 }/*# sourceMappingURL=style.css.map */
