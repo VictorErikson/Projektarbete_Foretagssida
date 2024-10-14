@@ -33,7 +33,8 @@
      object-position: top;
 }
 .video-background main .productsStartpage1 .wrapper .product, .video-background main .productsStartpage2 .wrapper .product {
-  max-width: 20%;
+  max-width: 20%; 
+}
 
 header {
   width: 100%;
