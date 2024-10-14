@@ -26,6 +26,17 @@
         object-fit: cover;
         object-position: top;
     }
+
+    main {
+        .productsStartpage1, .productsStartpage2{
+            .wrapper {
+                .product {
+                    max-width: 20%;
+                }
+            }
+        }
+
+    }
     
 }
 
