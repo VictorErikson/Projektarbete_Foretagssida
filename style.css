@@ -34,4 +34,9 @@
 }
 .video-background main .productsStartpage1 .wrapper .product, .video-background main .productsStartpage2 .wrapper .product {
   max-width: 20%;
+
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
