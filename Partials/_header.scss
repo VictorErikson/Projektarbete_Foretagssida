@@ -2,6 +2,14 @@
 
 header {
     width: 100%;
+    font-family: 'Josefin Sans', sans-serif;
  
 
+    .logoContainer {
+        @include flexColumn;
+
+        h1  .companyName {
+            @include flexColumn;
+        }
+    }
 }
