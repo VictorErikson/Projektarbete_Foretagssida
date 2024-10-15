@@ -66,18 +66,28 @@ main {
                     font-size: $headingS;
                     color: $black;
                     font-weight: 700;
+                    margin-bottom: 12px;
                 }
                 .products{
                     @include flexRow();
                     width: 100%;
                     gap: 4%;
+                    align-items: flex-start;
                     .RVRCProduct{
                         @include flexColumn();
                         width: 50%;
                         
+                        
                         img{
                             width: 100%;
+                            height: auto;
 
+                            &:hover{
+                                transform: scale(1.07);
+                                transition: transform 0.5s;
+                                opacity: 0.8;
+                                cursor: pointer;
+                            }
                         }
                         .productInfo{
                             width: 100%;
@@ -85,7 +95,7 @@ main {
                             @include flexRow();
                             align-items: flex-start;
                             justify-content: space-between;
-                            padding-top: 10px;
+                            padding-top: 15px;
                             font-size: 13px;
                             
                             .price{
