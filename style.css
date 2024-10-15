@@ -391,9 +391,12 @@ main .part3 .fjallravenPrimus .primus .primusImg {
 }
 
 .productsPage footer {
+  background-image: url("https://wallpaperaccess.com/full/686924.jpg");
   height: 124px;
   margin-bottom: 0px;
-  background: #F0F0F0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .productsPage footer .containerFooter .footerTop h2, .productsPage footer .containerFooter .footerTop p {
   color: #000000;

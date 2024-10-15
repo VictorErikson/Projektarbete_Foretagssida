@@ -323,10 +323,13 @@ main {
 
 .productsPage{
     footer {
-        // background-image: url('https://wallpaperaccess.com/full/686924.jpg');
+        background-image: url('https://wallpaperaccess.com/full/686924.jpg');
         height: 124px;
         margin-bottom: 0px;
-        background: $backgroundGrey;
+        // background: $backgroundGrey;
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
         .containerFooter{
             .footerTop{
                 h2, p{
