@@ -1,6 +1,6 @@
 @font-face {
   font-family: "JosefinSans";
-  src: url("../assets/fonts/JosefinSans-Regular.ttf") format("truetype");
+  src: url("../assets/fonts/static/JosefinSans-Regular.ttf") format("truetype");
 }
 * {
   margin: 0;
@@ -52,21 +52,19 @@ header {
   text-transform: uppercase;
 }
 
-header .logoContainer h1 {
+.uppercase {
   text-transform: uppercase;
 }
-header .navContainer {
-  text-transform: uppercase;
+
+body {
+  font-family: "Josefin Sans", sans-serif;
 }
 
 main .RVRC .adRVRC {
   position: relative;
   width: 100vw;
   height: 400px;
-  background-image: url("https://a.storyblok.com/f/142343/1920x720/8fdbb33836/autumn-jackets-desktop-1920_720.jpg/m/1920x0/smart"); /* Replace with your image path */
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
+  overflow: hidden;
 }
 main .RVRC .adRVRC .containerInfo {
   width: 100%;
@@ -91,4 +89,44 @@ main .RVRC .adRVRC .containerInfo .containerLogo {
 }
 main .RVRC .adRVRC .containerInfo .containerLogo .logo {
   height: 70px;
+}
+main .RVRC .adRVRC .RVRCImg {
+  z-index: -1;
+  width: 100%; /* Fill the container's width */
+  height: 100%; /* Fill the container's height */
+  -o-object-fit: cover;
+     object-fit: cover; /* Maintain aspect ratio and cover the container */
+  -o-object-position: top;
+     object-position: top; /* Center the image */
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+main .RVRC .bestOfRVRC {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .RVRC .bestOfRVRC .products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+}
+main .RVRC .bestOfRVRC .products .RVRCPants {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main .RVRC .bestOfRVRC .products .RVRCPants .productInfo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }/*# sourceMappingURL=style.css.map */
