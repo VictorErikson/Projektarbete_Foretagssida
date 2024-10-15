@@ -1,9 +1,13 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    z-index: 1;
-    position: relative;
+
+body {
+    min-height: 100vh;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .background {
@@ -19,12 +23,14 @@
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;
+        min-height: 100vh;
         background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
         z-index: 1; 
     }
 
     main {
+        
+
         .productsStartpage1, .productsStartpage2{
             .wrapper {
                 .product {

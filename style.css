@@ -2,12 +2,15 @@
   font-family: "JosefinSans";
   src: url("../assets/fonts/JosefinSans-Regular.ttf") format("truetype");
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  z-index: 1;
-  position: relative;
+body {
+  min-height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .background {
@@ -23,7 +26,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
   z-index: 1;
 }
@@ -33,8 +36,6 @@
 
 header {
   width: 100%;
-  height: 100px;
-  display: flex;
 }
 
 .shopNow {
@@ -86,4 +87,33 @@ main .RVRC .adRVRC .RVRCImg {
   position: absolute;
   top: 0px;
   left: -10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+footer {
+  font-family: Josefin Sans, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-top: auto;
+}
+footer h2 {
+  font-weight: 400;
+  color: #f0f0f0;
+  text-transform: uppercase;
+}
+footer p {
+  color: #f0f0f0;
+  font-weight: 100;
+}
+footer a {
+  text-decoration: none;
+  color: #f0f0f0;
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */

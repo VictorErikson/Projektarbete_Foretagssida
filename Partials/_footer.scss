@@ -1,0 +1,29 @@
+* {
+    margin: 0;           
+    padding: 0;          
+    box-sizing: border-box; 
+}
+
+
+footer {
+    font-family: Josefin Sans, sans-serif;
+    @include flexRow;
+    margin-top: auto;
+
+    h2 {
+        font-weight: 400;
+        color: #f0f0f0;
+        text-transform: uppercase;
+    }
+
+    p{
+        color:#f0f0f0;
+        font-weight: 100;
+    }
+
+    a {
+        text-decoration: none;
+        color: #f0f0f0;
+        text-transform: uppercase;
+    }
+}
