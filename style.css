@@ -1,6 +1,16 @@
 @charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .wrapper-content {
@@ -19,7 +29,8 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
 }
 .background .gradient-overlay {
   position: absolute;
@@ -27,8 +38,19 @@ body {
   left: 0;
   width: 100%;
   min-height: 100vh;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
   z-index: 1;
+}
+.background main .catchphrase-container {
+  background-color: rgba(240, 240, 240, 0.6);
+  width: 100%;
+  text-align: center;
+  padding: 7px;
+}
+.background main .catchphrase-container .catchphrase {
+  font-family: "Playfair Display", serif;
+  font-weight: 300;
+  font-size: 1.5rem;
 }
 .background main .productsStartpage1 .wrapper .product, .background main .productsStartpage2 .wrapper .product {
   max-width: 20%;
@@ -57,12 +79,19 @@ header .logoContainer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
+  gap: 20px;
 }
 header .logoContainer h1 .companyName {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+header .logoContainer .the {
+  font-size: 1rem;
 }
 header .navContainer {
   display: flex;
