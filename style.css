@@ -36,6 +36,19 @@ body {
 
 header {
   width: 100%;
+  font-family: "Josefin Sans", sans-serif;
+}
+header .logoContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+header .logoContainer h1 .companyName {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .shopNow {
@@ -176,9 +189,14 @@ main .part1 .RVRC .bestOfRVRC .products .RVRCProduct .productInfo .price {
   box-sizing: border-box;
 }
 
+hr {
+  border: none;
+  border-top: 1px solid #f0f0f0;
+}
+
 footer {
-  font-family: Josefin Sans, sans-serif;
-  font-family: ’JosefinSans’, sans-serif;
+
+  font-family: "Josefin Sans", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -190,18 +208,18 @@ footer h2 {
   margin-bottom: 20px;
 }
 footer h2 {
-  font-weight: 300;
+  font-weight: 350;
   font-size: 1.2rem;
   color: #f0f0f0;
   text-transform: uppercase;
 }
 footer p {
   color: #f0f0f0;
-  font-weight: 100;
+  font-weight: 200;
   font-size: 0.7rem;
-  opacity: 0.8;
 }
 footer a {
+  font-weight: 500;
   text-decoration: none;
   color: #f0f0f0;
   text-transform: uppercase;
