@@ -81,11 +81,11 @@ main {
                         img{
                             width: 100%;
                             height: auto;
+                            transition: transform 0.5s;
 
                             &:hover{
-                                transform: scale(1.07);
-                                transition: transform 0.5s;
-                                opacity: 0.8;
+                                transform: scale(1.03);
+                                opacity: 0.6;
                                 cursor: pointer;
                             }
                         }
@@ -106,6 +106,39 @@ main {
                             }
                         }
                     }
+                }
+            }
+        }
+
+        .bergans {
+
+            .logo{
+                width: 80vw;
+                position: absolute;
+                z-index: 1;
+            }
+            .bergansImg{
+                width: 100vw;
+                position: relative;
+            }
+        }
+    }
+}
+
+.productsPage{
+    footer {
+        .containerFooter{
+            .footerTop{
+                h2, p{
+                    color: $black;
+                }
+            }
+            hr{
+                border: 1px solid $black;
+            }
+            .footerBottom{
+                a{
+                    color: $black;
                 }
             }
         }
