@@ -3,13 +3,14 @@
   margin-bottom: 40px;
   background: $yellow;
   color: $btnTextGrey;
-  font-family: Josefin Sans, sans-serif;
+  font-family: 'JosefinSans', sans-serif;
   font-size: 24px;
   font-weight: 700;
   padding: 15px 30px;
     border-radius: 20px;
     border: none;
     margin: 0px;
+    text-transform: uppercase;
 }
 
 @mixin flexRow($justify:center, $align:center) {
