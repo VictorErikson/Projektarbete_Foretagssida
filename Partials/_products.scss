@@ -1,0 +1,25 @@
+//Universal styling
+.shopNow{
+    @include shopNow();
+}
+
+main {
+    .RVRC{
+        .adRVRC{
+            .containerInfo{
+                .containerLogo{
+                    width: 100vw;
+                    height: 70px;
+                    background: $backgroundLogo;
+                    
+                    .logo{
+                        height: 70px;
+                    }
+                }
+                .RVRCImg{
+                    max-width: 100vw;
+                }
+            }
+        }
+    }
+}
