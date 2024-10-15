@@ -38,6 +38,20 @@ header {
   width: 100%;
   font-family: "Josefin Sans", sans-serif;
 }
+header span {
+  text-transform: uppercase;
+  color: #53545B;
+  font-weight: 400;
+}
+header a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #53545B;
+  font-weight: 650;
+}
+header a:first-of-type {
+  color: #3AAE72;
+}
 header .logoContainer {
   display: flex;
   flex-direction: column;
@@ -49,6 +63,22 @@ header .logoContainer h1 .companyName {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+header .navContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(240, 240, 240, 0.6);
+  padding: 20px;
+  line-height: 12px;
+}
+header .navContainer hr {
+  border: none; /* Remove default border */
+  height: 1px; /* Set height of the line */
+  background: linear-gradient(to right, transparent, #53545B, transparent); /* Create a gradient */
+  width: 80%; /* Set the full width */
+  margin: 0; /* Add some space around the hr */
 }
 
 .shopNow {
