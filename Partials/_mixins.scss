@@ -10,3 +10,17 @@
     border-radius: 20px;
     border: none;
 }
+
+@mixin flexRow($justify:center, $align:center) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: row;
+  }
+
+@mixin flexColumn($justify:center, $align:center) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $justify;
+    align-items: $align;
+  }
