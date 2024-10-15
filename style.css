@@ -1,20 +1,11 @@
-@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  min-height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .wrapper-content {
-  font-family: ’JosefinSans’, sans-serif;
+  font-family: "JosefinSans", sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -139,6 +130,28 @@ body {
   font-family: "Josefin Sans", sans-serif;
 }
 
+.header.productsPage {
+  margin-bottom: 30px;
+  position: relative;
+}
+.header.productsPage .backgroundImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300%;
+  background-size: cover;
+  background-position: right;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-image: url("https://wallpaperaccess.com/full/686924.jpg");
+  margin-bottom: 0px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: -1;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -146,6 +159,7 @@ main {
   align-items: center;
   gap: 30px;
   overflow: hidden;
+  width: 100vw;
 }
 main .part1 .RVRC .adRVRC {
   position: relative;
@@ -450,9 +464,30 @@ main .part3 .fjallravenPrimus .primus .primusImg {
 }
 
 .productsPage footer {
-  height: 124px;
+  min-height: 124px;
+  position: relative;
+  width: 100vw;
+  margin: 0px;
+  padding: 0px;
+  z-index: 0;
+}
+.productsPage footer .backgroundImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://wallpaperaccess.com/full/686924.jpg");
   margin-bottom: 0px;
-  background: #F0F0F0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: -1;
+}
+.productsPage footer .containerFooter {
+  position: relative;
+  z-index: 1;
 }
 .productsPage footer .containerFooter .footerTop h2, .productsPage footer .containerFooter .footerTop p {
   color: #000000;
