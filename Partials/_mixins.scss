@@ -9,6 +9,7 @@
   padding: 15px 30px;
     border-radius: 20px;
     border: none;
+    margin: 0px;
 }
 
 @mixin flexRow($justify:center, $align:center) {

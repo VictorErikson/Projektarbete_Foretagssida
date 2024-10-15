@@ -48,24 +48,25 @@ header {
   padding: 15px 30px;
   border-radius: 20px;
   border: none;
+  margin: 0px;
 }
 
 main .RVRC .adRVRC {
   position: relative;
+  width: 100vw;
+  height: 390px;
+  overflow: hidden;
 }
-main .RVRC .adRVRC .RVRCImg {
-  max-width: 100vw;
-  z-index: -1;
+main .RVRC .adRVRC .containerInfo {
+  width: 100%;
+  height: 100%;
   position: relative;
 }
-main .RVRC .adRVRC .RVRCImg .shopNow {
+main .RVRC .adRVRC .containerInfo .shopNow {
   position: absolute;
-  top: 50;
-  left: 50;
-  transform: translate(-50%, -50%);
-  z-index: 1;
+  top: 0;
 }
-main .RVRC .adRVRC .RVRCImg .containerLogo {
+main .RVRC .adRVRC .containerInfo .containerLogo {
   width: 100vw;
   height: 70px;
   background: rgba(240, 240, 240, 0.8);
@@ -74,8 +75,15 @@ main .RVRC .adRVRC .RVRCImg .containerLogo {
   align-items: center;
   flex-direction: row;
   position: absolute;
-  bottom: 0;
+  bottom: 13%;
 }
-main .RVRC .adRVRC .RVRCImg .containerLogo .logo {
+main .RVRC .adRVRC .containerInfo .containerLogo .logo {
   height: 70px;
+}
+main .RVRC .adRVRC .RVRCImg {
+  z-index: -1;
+  min-height: 100%;
+  position: absolute;
+  top: 0px;
+  left: -10px;
 }/*# sourceMappingURL=style.css.map */
