@@ -127,14 +127,19 @@ main {
 
 .productsPage{
     footer {
-        .footerTop{
-            h2, p{
-                color: $black;
+        .containerFooter{
+            .footerTop{
+                h2, p{
+                    color: $black;
+                }
             }
-        }
-        .footerBottom{
-            a{
-                color: $black;
+            hr{
+                border: 1px solid $black;
+            }
+            .footerBottom{
+                a{
+                    color: $black;
+                }
             }
         }
     }

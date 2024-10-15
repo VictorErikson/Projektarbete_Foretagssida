@@ -191,10 +191,13 @@ main .part1 .bergans .bergansImg {
   position: relative;
 }
 
-.productsPage footer .footerTop h2, .productsPage footer .footerTop p {
+.productsPage footer .containerFooter .footerTop h2, .productsPage footer .containerFooter .footerTop p {
   color: #000000;
 }
-.productsPage footer .footerBottom a {
+.productsPage footer .containerFooter hr {
+  border: 1px solid #000000;
+}
+.productsPage footer .containerFooter .footerBottom a {
   color: #000000;
 }
 
@@ -210,7 +213,6 @@ hr {
 }
 
 footer {
-
   font-family: "Josefin Sans", sans-serif;
   display: flex;
   justify-content: center;
