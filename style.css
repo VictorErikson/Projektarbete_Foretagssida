@@ -110,11 +110,23 @@ body {
   font-family: "Josefin Sans", sans-serif;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  overflow: hidden;
+}
 main .part1 .RVRC .adRVRC {
   position: relative;
   width: 100vw;
   height: 400px;
   overflow: hidden;
+}
+main .part1 .RVRC .adRVRC:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 main .part1 .RVRC .adRVRC .containerInfo {
   width: 100%;
@@ -142,12 +154,12 @@ main .part1 .RVRC .adRVRC .containerInfo .containerLogo .logo {
 }
 main .part1 .RVRC .adRVRC .RVRCImg {
   z-index: -1;
-  width: 100%; /* Fill the container's width */
-  height: 100%; /* Fill the container's height */
+  width: 100%;
+  height: 100%;
   -o-object-fit: cover;
-     object-fit: cover; /* Maintain aspect ratio and cover the container */
+     object-fit: cover;
   -o-object-position: top;
-     object-position: top; /* Center the image */
+     object-position: top;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -211,16 +223,208 @@ main .part1 .RVRC .bestOfRVRC .products .RVRCProduct .productInfo .price {
   font-weight: bold;
   padding-left: 5px;
 }
+main .part1 .bergans {
+  position: relative;
+  width: 100vw;
+  height: 600px;
+}
+main .part1 .bergans:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
 main .part1 .bergans .logo {
-  width: 80vw;
+  width: 70vw;
   position: absolute;
   z-index: 1;
+  top: 6%;
+  left: 50%;
+  transform: translate(-50%, 0%);
 }
 main .part1 .bergans .bergansImg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+main .winterGear {
+  position: relative;
   width: 100vw;
+  height: 200px;
+}
+main .winterGear:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+main .winterGear .info {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+main .winterGear .info .text {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  text-align: right;
+}
+main .winterGear .info .text .stayOutdoor {
+  font-size: 24px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+main .winterGear .info .text .winterGear {
+  font-size: 20px;
+}
+main .winterGear .info .shopNow {
+  position: absolute;
+  bottom: 0;
+  right: 5%;
+  bottom: 10%;
+}
+main .winterGear img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+main .part3 .fjallravenPrimus .fjallraven .adFjallraven {
+  position: relative;
+  width: 100vw;
+  height: 400px;
+  overflow: hidden;
+}
+main .part3 .fjallravenPrimus .fjallraven .adFjallraven:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+main .part3 .fjallravenPrimus .fjallraven .adFjallraven .containerInfo {
+  width: 100%;
+  height: 100%;
   position: relative;
 }
+main .part3 .fjallravenPrimus .fjallraven .adFjallraven .containerInfo .containerLogo {
+  width: 100vw;
+  height: 70px;
+  background: rgba(240, 240, 240, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  position: absolute;
+  bottom: 13%;
+}
+main .part3 .fjallravenPrimus .fjallraven .adFjallraven .containerInfo .containerLogo .logo {
+  height: 70px;
+}
+main .part3 .fjallravenPrimus .fjallraven .adFjallraven .fjallravenVideo {
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+main .part3 .fjallravenPrimus .fjallraven .bestOfFjallraven {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-items: flex-start;
+  padding: 30px 4%;
+}
+main .part3 .fjallravenPrimus .fjallraven .bestOfFjallraven h2 {
+  font-size: 24px;
+  color: #000000;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+main .part3 .fjallravenPrimus .fjallraven .bestOfFjallraven .products {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  gap: 4%;
+  align-items: flex-start;
+}
+main .part3 .fjallravenPrimus .fjallraven .bestOfFjallraven .products .FjallravenProduct {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+main .part3 .fjallravenPrimus .fjallraven .bestOfFjallraven .products .FjallravenProduct img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s;
+}
+main .part3 .fjallravenPrimus .fjallraven .bestOfFjallraven .products .FjallravenProduct img:hover {
+  transform: scale(1.03);
+  opacity: 0.6;
+  cursor: pointer;
+}
+main .part3 .fjallravenPrimus .fjallraven .bestOfFjallraven .products .FjallravenProduct .productInfo {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-top: 15px;
+  font-size: 13px;
+}
+main .part3 .fjallravenPrimus .fjallraven .bestOfFjallraven .products .FjallravenProduct .productInfo .price {
+  font-size: 13px;
+  color: #000000;
+  font-weight: bold;
+  padding-left: 5px;
+}
+main .part3 .fjallravenPrimus .primus {
+  position: relative;
+  width: 100vw;
+  height: 20vh;
+  overflow: hidden;
+}
+main .part3 .fjallravenPrimus .primus:hover {
+  opacity: 0.8;
+  cursor: pointer;
+}
+main .part3 .fjallravenPrimus .primus .logo {
+  width: 50vw;
+  position: absolute;
+  z-index: 1;
+  top: 6%;
+  left: 5%;
+}
+main .part3 .fjallravenPrimus .primus .primusImg {
+  position: relative;
+  width: 140%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+}
 
+.productsPage footer {
+  height: 124px;
+  margin-bottom: 0px;
+  background: #F0F0F0;
+}
 .productsPage footer .containerFooter .footerTop h2, .productsPage footer .containerFooter .footerTop p {
   color: #000000;
 }
