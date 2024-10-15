@@ -6,11 +6,17 @@
   font-family: 'JosefinSans', sans-serif;
   font-size: 24px;
   font-weight: 700;
-  padding: 15px 30px;
-    border-radius: 20px;
+  padding: 10px 20px;
+    border-radius: 15px;
     border: none;
     margin: 0px;
     text-transform: uppercase;
+    
+    &:hover {
+        background: darken($yellow, 10%);
+        transform: scale(1.1);
+        cursor: pointer;                      transition: transform 0.5s;
+    }
 }
 
 @mixin flexRow($justify:center, $align:center) {
