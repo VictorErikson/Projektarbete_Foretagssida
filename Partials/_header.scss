@@ -4,12 +4,43 @@ header {
     width: 100%;
     font-family: 'Josefin Sans', sans-serif;
  
+    span {
+        text-transform: uppercase;
+        color: $darkGrey;
+        font-weight: 400;
+    }
+
+    a {
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $darkGrey;
+        font-weight: 650;
+    }
+
+    a:first-of-type {
+        color: $green;
+    }
 
     .logoContainer {
         @include flexColumn;
 
         h1  .companyName {
             @include flexColumn;
+        }
+    }
+
+    .navContainer {
+        @include flexColumn;
+        background-color: rgba(240, 240, 240, 0.6);
+        padding: 20px;
+        line-height: 12px;
+
+        hr {
+            border: none; /* Remove default border */
+            height: 1px; /* Set height of the line */
+            background: linear-gradient(to right, transparent, $darkGrey, transparent); /* Create a gradient */
+            width: 80%; /* Set the full width */
+            margin: 0; /* Add some space around the hr */
         }
     }
 }
