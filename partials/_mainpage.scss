@@ -3,11 +3,14 @@ body {
     min-height: 100vh;
 }
 
-.wrapper {
+.wrapper-content {
+    font-family: ’JosefinSans’, sans-serif; 
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    row-gap: 50px;
 }
 
 .background {
