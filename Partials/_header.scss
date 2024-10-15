@@ -23,9 +23,16 @@ header {
 
     .logoContainer {
         @include flexColumn;
+        margin-top: 20px;
+        gap: 20px;
 
         h1  .companyName {
             @include flexColumn;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .the {
+            font-size: 1rem;
         }
     }
 
