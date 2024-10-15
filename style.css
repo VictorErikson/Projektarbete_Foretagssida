@@ -49,13 +49,24 @@ header {
   border-radius: 20px;
   border: none;
   margin: 0px;
+  text-transform: uppercase;
+}
+
+header .logoContainer h1 {
+  text-transform: uppercase;
+}
+header .navContainer {
+  text-transform: uppercase;
 }
 
 main .RVRC .adRVRC {
   position: relative;
   width: 100vw;
-  height: 390px;
-  overflow: hidden;
+  height: 400px;
+  background-image: url("https://a.storyblok.com/f/142343/1920x720/8fdbb33836/autumn-jackets-desktop-1920_720.jpg/m/1920x0/smart"); /* Replace with your image path */
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 main .RVRC .adRVRC .containerInfo {
   width: 100%;
@@ -64,7 +75,8 @@ main .RVRC .adRVRC .containerInfo {
 }
 main .RVRC .adRVRC .containerInfo .shopNow {
   position: absolute;
-  top: 0;
+  top: 13%;
+  left: 3%;
 }
 main .RVRC .adRVRC .containerInfo .containerLogo {
   width: 100vw;
@@ -79,11 +91,4 @@ main .RVRC .adRVRC .containerInfo .containerLogo {
 }
 main .RVRC .adRVRC .containerInfo .containerLogo .logo {
   height: 70px;
-}
-main .RVRC .adRVRC .RVRCImg {
-  z-index: -1;
-  min-height: 100%;
-  position: absolute;
-  top: 0px;
-  left: -10px;
 }/*# sourceMappingURL=style.css.map */
