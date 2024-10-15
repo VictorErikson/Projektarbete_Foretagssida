@@ -6,24 +6,51 @@
 
 
 footer {
-    font-family: Josefin Sans, sans-serif;
+    font-family: ’JosefinSans’, sans-serif; 
     @include flexRow;
     margin-top: auto;
+    margin-bottom: 20px;
+    
+
 
     h2 {
-        font-weight: 400;
+        font-weight: 300;
+        font-size: 1.2rem;
         color: #f0f0f0;
         text-transform: uppercase;
     }
 
     p{
-        color:#f0f0f0;
+        color: #f0f0f0;
         font-weight: 100;
+        font-size: 0.7rem;
+        opacity: 0.8;
+
     }
 
     a {
         text-decoration: none;
         color: #f0f0f0;
         text-transform: uppercase;
+    }
+
+    .footerTop {
+        @include flexRow;
+        column-gap: 30px;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .footerBottom {
+        @include flexRow;
+        justify-content: space-between;
+        margin-top: 10px;
+
+        a {
+            font-size: 0.7rem;
+        }
+        a:hover {
+            border-bottom: 1px solid #f0f0f0;
+        }
     }
 }

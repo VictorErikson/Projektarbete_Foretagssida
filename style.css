@@ -1,12 +1,16 @@
+@charset "UTF-8";
 body {
   min-height: 100vh;
 }
 
-.wrapper {
+.wrapper-content {
+  font-family: ’JosefinSans’, sans-serif;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  row-gap: 50px;
 }
 
 .background {
@@ -156,6 +160,7 @@ main .part1 .RVRC .bestOfRVRC .products .RVRCProduct .productInfo {
   align-items: flex-start;
   justify-content: space-between;
   padding-top: 15px;
+  padding-top: 10px;
   font-size: 13px;
 }
 main .part1 .RVRC .bestOfRVRC .products .RVRCProduct .productInfo .price {
@@ -173,6 +178,7 @@ main .part1 .RVRC .bestOfRVRC .products .RVRCProduct .productInfo .price {
 
 footer {
   font-family: Josefin Sans, sans-serif;
+  font-family: ’JosefinSans’, sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -181,15 +187,46 @@ footer {
 }
 footer h2 {
   font-weight: 400;
+  margin-bottom: 20px;
+}
+footer h2 {
+  font-weight: 300;
+  font-size: 1.2rem;
   color: #f0f0f0;
   text-transform: uppercase;
 }
 footer p {
   color: #f0f0f0;
   font-weight: 100;
+  font-size: 0.7rem;
+  opacity: 0.8;
 }
 footer a {
   text-decoration: none;
   color: #f0f0f0;
   text-transform: uppercase;
+}
+footer .footerTop {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+footer .footerBottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+footer .footerBottom a {
+  font-size: 0.7rem;
+}
+footer .footerBottom a:hover {
+  border-bottom: 1px solid #f0f0f0;
 }/*# sourceMappingURL=style.css.map */
