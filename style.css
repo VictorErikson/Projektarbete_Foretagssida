@@ -559,4 +559,16 @@ footer .footerBottom a {
 }
 footer .footerBottom a:hover {
   border-bottom: 1px solid #f0f0f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.ref-wrapper {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: red;
 }/*# sourceMappingURL=style.css.map */
