@@ -1,6 +1,6 @@
-@mixin desktop {
+@mixin extraWide {
 
-    @media (width > 2780px) {
+    @media (width > 2000px) {
     
     @content
     
