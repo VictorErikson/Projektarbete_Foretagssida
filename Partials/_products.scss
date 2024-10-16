@@ -1,9 +1,5 @@
 //Universal styling
-// *{
-//     margin: 0;
-//     padding: 0;
-//     box-sizing: border-box;
-// }
+
 .shopNow{
     @include shopNow();
 }
@@ -15,18 +11,18 @@
 body{
     font-family: 'Josefin Sans', sans-serif;
 }
-        
-// .productsPage{
-//     overflow: hidden;
-// }
-// main > *:nth-last-child() {
-//     margin-bottom: 0; /* Remove the gap between the last two items */
-//   }
+
+      
+
 .header.productsPage{
     margin-bottom: 30px;
-
+    width: 100vw;
     position: relative;
-    
+    overflow-x: hidden;
+    .logoContainer{
+        margin-top: 0px;
+    }
+
     .backgroundImg{
         position: absolute;
         top: 0;
@@ -47,23 +43,46 @@ body{
     }
 };
 
+
+
 main {
     @include flexColumn();
     gap: 30px;
     overflow: hidden;
     width: 100vw;
+    
+    @include extraWide {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        }
+
+
     .part1{
+
+        @include tablet {
+            @include flexRow();
+            align-items: stretch;
+            }
+
         .RVRC{
+            
+
             .adRVRC{
                 position: relative;
                 width: 100vw;
                 height: 400px;
                 overflow: hidden;
+                gap: 30px;
 
                 &:hover{
                     opacity: 0.8;
                     cursor: pointer;
                 }
+
+                @include tablet {
+                    width: 46vw;
+                    margin-left: 4%;
+                    }
 
                 .containerInfo{
                     width: 100%;
@@ -75,7 +94,7 @@ main {
                         left: 3%;
                     }
                     .containerLogo{
-                        width: 100vw;
+                        width: 100%;
                         height: 70px;
                         background: $backgroundLogo;
                         @include flexRow();
@@ -105,6 +124,10 @@ main {
                 @include flexColumn();
                 align-items: flex-start;
                 padding: 30px 4%;
+
+                @include tablet {
+                    width: 50vw;
+                    }
                 h2{
                     font-size: $headingS;
                     color: $black;
@@ -134,7 +157,7 @@ main {
                         }
                         .productInfo{
                             width: 100%;
-                            height: 100%;
+                            min-height: 41px;
                             @include flexRow();
                             align-items: flex-start;
                             justify-content: space-between;
@@ -158,18 +181,27 @@ main {
             width: 100vw;
             height: 600px;
             
+            
             &:hover{
                 opacity: 0.8;
                 cursor: pointer;
             }
 
+            @include tablet {
+                width: 50vw;
+                height: auto;
+                flex-grow: 1;
+                padding-right: 3%;
+                }
+
             .logo{
-                width: 70vw;
+                width: 70%;
                 position: absolute;
                 z-index: 1;
                 top: 6%;
                 left: 50%; 
                 transform: translate(-50%, 0%);
+
             }
             .bergansImg{
                 position: relative;
@@ -177,6 +209,10 @@ main {
                 height: 100%;
                 object-fit: cover; 
                 object-position: center; 
+
+                @include tablet {
+                    height: calc(100% - 71px);
+                    }
             }
         }
     }
@@ -188,6 +224,12 @@ main {
             opacity: 0.8;
             cursor: pointer;
         }
+        @include tablet {
+            height: 400px;
+            grid-column: span 2;
+            grid-row-start: 2;
+            grid-column-start: 1;
+            }
 
         .info{
             position: absolute;
@@ -205,9 +247,20 @@ main {
                     font-size: $headingS;
                     padding-right: 20px;
                     padding-left: 20px;
+
+                    @include tablet {
+                        font-size: $headingL;
+                        padding-right: 140px;
+                        padding-left: 40px;
+                        }
                 }
                 .winterGear{
                     font-size: 20px;
+                    @include tablet {
+                        font-size: $headingM;
+                        padding-right: 40px;
+                        padding-left: 40px;
+                        }
                 }
             }
             .shopNow{
@@ -228,15 +281,30 @@ main {
     }
 
     .part3{
+        @include tablet {
+            width: 100vw;
+            }
         .fjallravenPrimus{
-
+            @include tablet {
+                @include flexRow(space-between, flex-start);
+                flex-direction: row-reverse;
+                align-items: stretch;
+                }
             .fjallraven{
+                @include tablet {
+                    width: 50%;
+                    padding-right: 3%;
+                    }
                 .adFjallraven{
                     position: relative;
                     width: 100vw;
                     height: 400px;
                     overflow: hidden;
-
+                    
+                    @include tablet {
+                        width: 100%;
+                        height: 30vh;
+                        }
     
                     &:hover{
                         opacity: 0.8;
@@ -255,7 +323,10 @@ main {
                             @include flexRow();
                             position: absolute;
                             bottom: 13%;
-            
+                            
+                            @include tablet {
+                                width: 100%;
+                                }
                             .logo{
                                 height: 70px;
             
@@ -271,6 +342,7 @@ main {
                         position: absolute;
                         top: 0px; 
                         left: 0px;
+                        
                     }
                 }
                 .bestOfFjallraven{
@@ -278,6 +350,13 @@ main {
                     @include flexColumn();
                     align-items: flex-start;
                     padding: 30px 4%;
+
+                    @include tablet {
+                        width: 50vw;
+                        // width: 100%;
+                        // height: auto;
+                        // height: 30vh;
+                        }
                     h2{
                         font-size: $headingS;
                         color: $black;
@@ -291,8 +370,12 @@ main {
                         align-items: flex-start;
                         .FjallravenProduct{
                             @include flexColumn();
-                            width: 50%;
+                            max-width: 50%;
                             
+                            // @include tablet {
+                            //     max-width: auto;
+                            //     height: 100%;
+                            //     }
                             
                             img{
                                 width: 100%;
@@ -304,6 +387,11 @@ main {
                                     opacity: 0.6;
                                     cursor: pointer;
                                 }
+
+                                // @include tablet {
+                                //     width: 50%;
+                                //     height: auto;
+                                //     }
                             }
                             .productInfo{
                                 width: 100%;
@@ -329,7 +417,15 @@ main {
                 position: relative;
                 width: 100vw;
                 height: 20vh;
-                overflow: hidden;
+                // overflow: hidden;
+
+                @include tablet {
+                    width: 50vw;
+                    // height: calc(60vh - 58px);
+                    height: auto;
+                    flex-grow: 1;
+                    margin: 0px 2%;
+                    }
                 
                 &:hover{
                     opacity: 0.8;
@@ -342,6 +438,12 @@ main {
                     z-index: 1;
                     top: 6%;
                     left: 5%; 
+                    @include tablet {
+                        width: 40%;
+                        // top: 6%;
+                        // right: 5%; 
+                        // left: auto;
+                        }
                 }
                 .primusImg{
                     position: relative;
@@ -349,6 +451,11 @@ main {
                     height: 100%;
                     object-fit: cover;
                     object-position: top;
+                    @include tablet {
+                        width: 100%;
+                        height: calc(100% - 58px);
+                        object-position: center;
+                        }
                 }
             }
         }
@@ -396,6 +503,9 @@ main {
             .footerBottom{
                 a{
                     color: $black;
+                }
+                a:hover{
+                    border-bottom: 1px solid $black;
                 }
             }
         }
