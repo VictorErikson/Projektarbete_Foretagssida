@@ -1,0 +1,19 @@
+@mixin desktop {
+
+    @media (width > 2780px) {
+    
+    @content
+    
+    }
+    
+    };
+
+@mixin tablet {
+
+    @media (width > 850px) {
+    
+    @content
+    
+    }
+    
+    };

@@ -132,7 +132,12 @@ body {
 
 .header.productsPage {
   margin-bottom: 30px;
+  width: 100vw;
   position: relative;
+  overflow-x: hidden;
+}
+.header.productsPage .logoContainer {
+  margin-top: 0px;
 }
 .header.productsPage .backgroundImg {
   position: absolute;
@@ -161,15 +166,31 @@ main {
   overflow: hidden;
   width: 100vw;
 }
+@media (width > 850px) {
+  main .part1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    align-items: stretch;
+  }
+}
 main .part1 .RVRC .adRVRC {
   position: relative;
   width: 100vw;
   height: 400px;
   overflow: hidden;
+  gap: 30px;
 }
 main .part1 .RVRC .adRVRC:hover {
   opacity: 0.8;
   cursor: pointer;
+}
+@media (width > 850px) {
+  main .part1 .RVRC .adRVRC {
+    width: 46vw;
+    margin-left: 4%;
+  }
 }
 main .part1 .RVRC .adRVRC .containerInfo {
   width: 100%;
@@ -182,7 +203,7 @@ main .part1 .RVRC .adRVRC .containerInfo .shopNow {
   left: 3%;
 }
 main .part1 .RVRC .adRVRC .containerInfo .containerLogo {
-  width: 100vw;
+  width: 100%;
   height: 70px;
   background: rgba(240, 240, 240, 0.8);
   display: flex;
@@ -215,6 +236,11 @@ main .part1 .RVRC .bestOfRVRC {
   align-items: center;
   align-items: flex-start;
   padding: 30px 4%;
+}
+@media (width > 850px) {
+  main .part1 .RVRC .bestOfRVRC {
+    width: 50vw;
+  }
 }
 main .part1 .RVRC .bestOfRVRC h2 {
   font-size: 24px;
@@ -250,7 +276,7 @@ main .part1 .RVRC .bestOfRVRC .products .RVRCProduct img:hover {
 }
 main .part1 .RVRC .bestOfRVRC .products .RVRCProduct .productInfo {
   width: 100%;
-  height: 100%;
+  min-height: 41px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -275,8 +301,16 @@ main .part1 .bergans:hover {
   opacity: 0.8;
   cursor: pointer;
 }
+@media (width > 850px) {
+  main .part1 .bergans {
+    width: 50vw;
+    height: auto;
+    flex-grow: 1;
+    padding-right: 3%;
+  }
+}
 main .part1 .bergans .logo {
-  width: 70vw;
+  width: 70%;
   position: absolute;
   z-index: 1;
   top: 6%;
@@ -292,6 +326,11 @@ main .part1 .bergans .bergansImg {
   -o-object-position: center;
      object-position: center;
 }
+@media (width > 850px) {
+  main .part1 .bergans .bergansImg {
+    height: calc(100% - 71px);
+  }
+}
 main .winterGear {
   position: relative;
   width: 100vw;
@@ -300,6 +339,11 @@ main .winterGear {
 main .winterGear:hover {
   opacity: 0.8;
   cursor: pointer;
+}
+@media (width > 850px) {
+  main .winterGear {
+    height: 400px;
+  }
 }
 main .winterGear .info {
   position: absolute;
@@ -318,8 +362,22 @@ main .winterGear .info .text .stayOutdoor {
   padding-right: 20px;
   padding-left: 20px;
 }
+@media (width > 850px) {
+  main .winterGear .info .text .stayOutdoor {
+    font-size: 48px;
+    padding-right: 140px;
+    padding-left: 40px;
+  }
+}
 main .winterGear .info .text .winterGear {
   font-size: 20px;
+}
+@media (width > 850px) {
+  main .winterGear .info .text .winterGear {
+    font-size: 32px;
+    padding-right: 40px;
+    padding-left: 40px;
+  }
 }
 main .winterGear .info .shopNow {
   position: absolute;
@@ -336,11 +394,38 @@ main .winterGear img {
   -o-object-position: center;
      object-position: center;
 }
+@media (width > 850px) {
+  main .part3 {
+    width: 100vw;
+  }
+}
+@media (width > 850px) {
+  main .part3 .fjallravenPrimus {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-direction: row-reverse;
+    align-items: stretch;
+  }
+}
+@media (width > 850px) {
+  main .part3 .fjallravenPrimus .fjallraven {
+    width: 50%;
+    padding-right: 3%;
+  }
+}
 main .part3 .fjallravenPrimus .fjallraven .adFjallraven {
   position: relative;
   width: 100vw;
   height: 400px;
   overflow: hidden;
+}
+@media (width > 850px) {
+  main .part3 .fjallravenPrimus .fjallraven .adFjallraven {
+    width: 100%;
+    height: 30vh;
+  }
 }
 main .part3 .fjallravenPrimus .fjallraven .adFjallraven:hover {
   opacity: 0.8;
@@ -361,6 +446,11 @@ main .part3 .fjallravenPrimus .fjallraven .adFjallraven .containerInfo .containe
   flex-direction: row;
   position: absolute;
   bottom: 13%;
+}
+@media (width > 850px) {
+  main .part3 .fjallravenPrimus .fjallraven .adFjallraven .containerInfo .containerLogo {
+    width: 100%;
+  }
 }
 main .part3 .fjallravenPrimus .fjallraven .adFjallraven .containerInfo .containerLogo .logo {
   height: 70px;
@@ -386,6 +476,11 @@ main .part3 .fjallravenPrimus .fjallraven .bestOfFjallraven {
   align-items: flex-start;
   padding: 30px 4%;
 }
+@media (width > 850px) {
+  main .part3 .fjallravenPrimus .fjallraven .bestOfFjallraven {
+    width: 50vw;
+  }
+}
 main .part3 .fjallravenPrimus .fjallraven .bestOfFjallraven h2 {
   font-size: 24px;
   color: #000000;
@@ -406,7 +501,7 @@ main .part3 .fjallravenPrimus .fjallraven .bestOfFjallraven .products .Fjallrave
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  max-width: 50%;
 }
 main .part3 .fjallravenPrimus .fjallraven .bestOfFjallraven .products .FjallravenProduct img {
   width: 100%;
@@ -440,7 +535,14 @@ main .part3 .fjallravenPrimus .primus {
   position: relative;
   width: 100vw;
   height: 20vh;
-  overflow: hidden;
+}
+@media (width > 850px) {
+  main .part3 .fjallravenPrimus .primus {
+    width: 50vw;
+    height: auto;
+    flex-grow: 1;
+    margin: 0px 2%;
+  }
 }
 main .part3 .fjallravenPrimus .primus:hover {
   opacity: 0.8;
@@ -453,6 +555,11 @@ main .part3 .fjallravenPrimus .primus .logo {
   top: 6%;
   left: 5%;
 }
+@media (width > 850px) {
+  main .part3 .fjallravenPrimus .primus .logo {
+    width: 40%;
+  }
+}
 main .part3 .fjallravenPrimus .primus .primusImg {
   position: relative;
   width: 140%;
@@ -461,6 +568,14 @@ main .part3 .fjallravenPrimus .primus .primusImg {
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
+}
+@media (width > 850px) {
+  main .part3 .fjallravenPrimus .primus .primusImg {
+    width: 100%;
+    height: calc(100% - 58px);
+    -o-object-position: center;
+       object-position: center;
+  }
 }
 
 .productsPage footer {
