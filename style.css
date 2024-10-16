@@ -567,6 +567,14 @@ footer .footerBottom a:hover {
   box-sizing: border-box;
 }
 
+
+
+.ref-wrapper {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: red;
+
+  
 body {
   font-family: "Josefin Sans", sans-serif;
 }
@@ -630,4 +638,6 @@ body {
 }
 .wrapper .second-section .staff .staff-top .portrait img, .wrapper .second-section .staff .staff-bottom .portrait img {
   width: 100%;
+
+  
 }/*# sourceMappingURL=style.css.map */
