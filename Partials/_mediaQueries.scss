@@ -17,3 +17,10 @@
     }
     
     };
+
+
+@mixin desktopAbout { 
+    @media (width > 800px) {
+    @content
+    }
+};
