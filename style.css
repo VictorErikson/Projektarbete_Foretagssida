@@ -694,6 +694,20 @@ footer .footerBottom a:hover {
   box-sizing: border-box;
 }
 
+
+.ref-wrapper {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: red;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 .ref-wrapper {
   min-height: 100vh;
   width: 100vw;
@@ -797,6 +811,8 @@ body {
 }
 .wrapper .second-section .staff .portrait .img img {
   width: 100%;
+
+
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -804,4 +820,5 @@ body {
 }
 .wrapper .second-section .staff .portrait .img img.mike {
   height: 100%;
+
 }/*# sourceMappingURL=style.css.map */
