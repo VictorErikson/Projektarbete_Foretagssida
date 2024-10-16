@@ -32,3 +32,33 @@
     justify-content: $justify;
     align-items: $align;
   }
+
+  @mixin nameheader() {
+    font-family: 'JosefinSans', sans-serif;
+    font-weight: 600;
+    color: $grey;
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+
+  @mixin andteam() {
+    font-family: 'JosefinSans', sans-serif;
+    font-weight: 100;
+    color: $paragraphgrey;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    text-indent: 68px;
+  }
+
+  @mixin q-mark() {
+    font-family: "Playfair Display", serif;
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  @mixin info-text() {
+    font-family: 'JosefinSans', sans-serif;
+    font-weight: 500;
+    color: $darkGrey;
+    font-size: 0.8rem;
+  }
