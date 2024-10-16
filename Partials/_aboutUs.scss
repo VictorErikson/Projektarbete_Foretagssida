@@ -47,26 +47,54 @@ body {
   } 
   
   .second-section {
-    padding: 10%;
+    padding: 5%;
     background-color: #FFFF;
-    margin: 10%;
+    margin: 7% 5%;
     box-sizing: border-box;
     width: auto;
     .staff { 
-      @include flexColumn(); 
-      .staff-top,.staff-bottom {
-        @include flexRow();
+      @include flexColumn();
         justify-content: space-between;
-        width: 100%;
+        align-items: center;
+
+        .staff-top,.staff-middle,.staff-bottom {
+          display: flex;
+          flex-wrap: wrap;
+        }
+        
         .portrait {
-          width: 20%; 
-          img {
-            width:100%; 
+          width: auto; 
+            p {
+              font-size: 12px;
+            }
+          .img {
+            overflow: hidden;
+            width: 130px;
+            height: 130px;
+            @include flexRow();
+            margin-top: 1rem;
+            img {
+              width: 100%;
+              object-fit: cover;
+              object-position: center;
+             
+            }
+            img.mike {
+              height: 100%;
+            }
+            
+          }
+
           }
         }
       }
     }
-  }
-}
+  
 
+@media (width > 800px) {
+  body {
+    background: red;
+  }
+  
+}
 
