@@ -682,14 +682,18 @@ footer .footerBottom a:hover {
   box-sizing: border-box;
 }
 
-
-
 .ref-wrapper {
   min-height: 100vh;
   width: 100vw;
   background-color: red;
+}
 
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: "Josefin Sans", sans-serif;
 }
@@ -739,12 +743,29 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
+}
+@media (width > 800px) {
+  .wrapper .second-section .staff {
+    flex-direction: row;
+  }
 }
 .wrapper .second-section .staff .staff-top, .wrapper .second-section .staff .staff-middle, .wrapper .second-section .staff .staff-bottom {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+@media (width > 800px) {
+  .wrapper .second-section .staff .staff-top, .wrapper .second-section .staff .staff-middle, .wrapper .second-section .staff .staff-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
 }
 .wrapper .second-section .staff .portrait {
   width: auto;
@@ -771,12 +792,4 @@ body {
 }
 .wrapper .second-section .staff .portrait .img img.mike {
   height: 100%;
-}
-
-@media (width > 800px) {
-  body {
-    background: red;
-  }
-
-  
 }/*# sourceMappingURL=style.css.map */
