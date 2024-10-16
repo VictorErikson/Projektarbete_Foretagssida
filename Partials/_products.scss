@@ -1,4 +1,9 @@
 //Universal styling
+// *{
+//     margin: 0;
+//     padding: 0;
+//     box-sizing: border-box;
+// }
 .shopNow{
     @include shopNow();
 }
@@ -9,11 +14,44 @@
 
 body{
     font-family: 'Josefin Sans', sans-serif;
-
 }
         
+// .productsPage{
+//     overflow: hidden;
+// }
+// main > *:nth-last-child() {
+//     margin-bottom: 0; /* Remove the gap between the last two items */
+//   }
+.header.productsPage{
+    margin-bottom: 30px;
+
+    position: relative;
+    
+    .backgroundImg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300%;
+        background-size: cover; 
+        background-position: right; 
+        background-repeat: no-repeat;
+        height: 100%;
+        background-image: url('https://wallpaperaccess.com/full/686924.jpg');
+        margin-bottom: 0px;
+        // background: $backgroundGrey;
+        background-size: cover; 
+        background-position: center; 
+        background-repeat: no-repeat;
+        opacity: 0.2;
+        z-index: -1;
+    }
+};
 
 main {
+    @include flexColumn();
+    gap: 30px;
+    overflow: hidden;
+    width: 100vw;
     .part1{
         .RVRC{
             .adRVRC{
@@ -21,6 +59,12 @@ main {
                 width: 100vw;
                 height: 400px;
                 overflow: hidden;
+
+                &:hover{
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
+
                 .containerInfo{
                     width: 100%;
                     height: 100%;
@@ -46,11 +90,10 @@ main {
                 }
                 .RVRCImg{
                     z-index: -1;
-
-                    width: 100%; /* Fill the container's width */
-                    height: 100%; /* Fill the container's height */
-                    object-fit: cover; /* Maintain aspect ratio and cover the container */
-                    object-position: top; /* Center the image */
+                    width: 100%; 
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: top;
                     position: absolute;
                     top: 0px; 
                     left: 0px;
@@ -81,11 +124,11 @@ main {
                         img{
                             width: 100%;
                             height: auto;
+                            transition: transform 0.5s;
 
                             &:hover{
-                                transform: scale(1.07);
-                                transition: transform 0.5s;
-                                opacity: 0.8;
+                                transform: scale(1.03);
+                                opacity: 0.6;
                                 cursor: pointer;
                             }
                         }
@@ -106,6 +149,253 @@ main {
                             }
                         }
                     }
+                }
+            }
+        }
+
+        .bergans {
+            position: relative;
+            width: 100vw;
+            height: 600px;
+            
+            &:hover{
+                opacity: 0.8;
+                cursor: pointer;
+            }
+
+            .logo{
+                width: 70vw;
+                position: absolute;
+                z-index: 1;
+                top: 6%;
+                left: 50%; 
+                transform: translate(-50%, 0%);
+            }
+            .bergansImg{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                object-fit: cover; 
+                object-position: center; 
+            }
+        }
+    }
+    .winterGear{
+        position: relative;
+        width: 100vw;
+        height: 200px;
+        &:hover{
+            opacity: 0.8;
+            cursor: pointer;
+        }
+
+        .info{
+            position: absolute;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+
+            .text{
+                position: absolute;
+                top: 10%;
+                right: 5%;
+                text-align: right;
+
+                .stayOutdoor{
+                    font-size: $headingS;
+                    padding-right: 20px;
+                    padding-left: 20px;
+                }
+                .winterGear{
+                    font-size: 20px;
+                }
+            }
+            .shopNow{
+                position: absolute;
+                bottom: 0;
+                right: 5%;
+                bottom: 10%;
+            }
+        }
+        img{
+            position: relative;
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
+            object-position: center; 
+        }
+
+    }
+
+    .part3{
+        .fjallravenPrimus{
+
+            .fjallraven{
+                .adFjallraven{
+                    position: relative;
+                    width: 100vw;
+                    height: 400px;
+                    overflow: hidden;
+
+    
+                    &:hover{
+                        opacity: 0.8;
+                        cursor: pointer;
+                    }
+                    
+                    .containerInfo{
+                        width: 100%;
+                        height: 100%;
+                        position: relative;
+
+                        .containerLogo{
+                            width: 100vw;
+                            height: 70px;
+                            background: $backgroundLogo;
+                            @include flexRow();
+                            position: absolute;
+                            bottom: 13%;
+            
+                            .logo{
+                                height: 70px;
+            
+                            }
+                        }
+                    }
+                    .fjallravenVideo{
+                        z-index: -1;
+                        width: 100%; 
+                        height: 100%;
+                        object-fit: cover;
+                        object-position: top;
+                        position: absolute;
+                        top: 0px; 
+                        left: 0px;
+                    }
+                }
+                .bestOfFjallraven{
+                    width: 100vw;
+                    @include flexColumn();
+                    align-items: flex-start;
+                    padding: 30px 4%;
+                    h2{
+                        font-size: $headingS;
+                        color: $black;
+                        font-weight: 700;
+                        margin-bottom: 12px;
+                    }
+                    .products{
+                        @include flexRow();
+                        width: 100%;
+                        gap: 4%;
+                        align-items: flex-start;
+                        .FjallravenProduct{
+                            @include flexColumn();
+                            width: 50%;
+                            
+                            
+                            img{
+                                width: 100%;
+                                height: auto;
+                                transition: transform 0.5s;
+    
+                                &:hover{
+                                    transform: scale(1.03);
+                                    opacity: 0.6;
+                                    cursor: pointer;
+                                }
+                            }
+                            .productInfo{
+                                width: 100%;
+                                height: 100%;
+                                @include flexRow();
+                                align-items: flex-start;
+                                justify-content: space-between;
+                                padding-top: 15px;
+                                font-size: 13px;
+                                
+                                .price{
+                                    font-size: 13px;
+                                    color: $black;
+                                    font-weight: bold;
+                                    padding-left: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .primus {
+                position: relative;
+                width: 100vw;
+                height: 20vh;
+                overflow: hidden;
+                
+                &:hover{
+                    opacity: 0.8;
+                    cursor: pointer;
+                }
+    
+                .logo{
+                    width: 50vw;
+                    position: absolute;
+                    z-index: 1;
+                    top: 6%;
+                    left: 5%; 
+                }
+                .primusImg{
+                    position: relative;
+                    width: 140%;
+                    height: 100%;
+                    object-fit: cover;
+                    object-position: top;
+                }
+            }
+        }
+    }
+
+}
+
+.productsPage{
+    footer {
+        min-height: 124px;
+        position: relative;
+        width: 100vw;
+        margin: 0px;
+        padding: 0px;
+        z-index: 0;
+        
+        .backgroundImg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://wallpaperaccess.com/full/686924.jpg');
+            margin-bottom: 0px;
+            // background: $backgroundGrey;
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        .containerFooter{
+
+            position: relative;
+            z-index: 1; 
+            .footerTop{
+                h2, p{
+                    color: $black;
+                }
+            }
+            hr{
+                border: 1px solid $black;
+            }
+            .footerBottom{
+                a{
+                    color: $black;
                 }
             }
         }

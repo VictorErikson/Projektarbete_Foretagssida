@@ -1,10 +1,20 @@
-
-body {
-    min-height: 100vh;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+
+// body {
+//     min-height: 100vh;
+//     width: 100vw;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+// }
+
 .wrapper-content {
-    font-family: ’JosefinSans’, sans-serif; 
+    font-family: 'JosefinSans', sans-serif; 
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -19,7 +29,8 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    min-height: 100vh;
+    height: 100vh;
+    width: 100vw;
 
     .gradient-overlay {
         position: absolute;
@@ -27,12 +38,26 @@ body {
         left: 0;
         width: 100%;
         min-height: 100vh;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0));
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
         z-index: 1; 
     }
 
     main {
+
+        .catchphrase-container {
+            background-color: rgba(240, 240, 240, 0.6);
+            width: 100%;
+            text-align: center;
+            padding: 7px;
+       
+            .catchphrase {
+                font-family: "Playfair Display", serif;
+                font-weight: 300;
+                font-size: 1.5rem;
+                
+            }
         
+    }
 
         .productsStartpage1, .productsStartpage2{
             .wrapper {
