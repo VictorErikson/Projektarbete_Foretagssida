@@ -744,9 +744,9 @@ body {
   margin-bottom: 0.5rem;
 }
 .wrapper .second-section {
-  padding: 10%;
+  padding: 5%;
   background-color: white;
-  margin: 10%;
+  margin: 7% 5%;
   box-sizing: border-box;
   width: auto;
 }
@@ -755,18 +755,53 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.wrapper .second-section .staff .staff-top, .wrapper .second-section .staff .staff-bottom {
+@media (width > 800px) {
+  .wrapper .second-section .staff {
+    flex-direction: row;
+  }
+}
+.wrapper .second-section .staff .staff-top, .wrapper .second-section .staff .staff-middle, .wrapper .second-section .staff .staff-bottom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  height: 100%;
+}
+@media (width > 800px) {
+  .wrapper .second-section .staff .staff-top, .wrapper .second-section .staff .staff-middle, .wrapper .second-section .staff .staff-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+.wrapper .second-section .staff .portrait {
+  width: auto;
+}
+.wrapper .second-section .staff .portrait p {
+  font-size: 12px;
+}
+.wrapper .second-section .staff .portrait .img {
+  overflow: hidden;
+  width: 130px;
+  height: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
+  margin-top: 1rem;
 }
-.wrapper .second-section .staff .staff-top .portrait, .wrapper .second-section .staff .staff-bottom .portrait {
-  width: 20%;
-}
-.wrapper .second-section .staff .staff-top .portrait img, .wrapper .second-section .staff .staff-bottom .portrait img {
+.wrapper .second-section .staff .portrait .img img {
   width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.wrapper .second-section .staff .portrait .img img.mike {
+  height: 100%;
 }/*# sourceMappingURL=style.css.map */
