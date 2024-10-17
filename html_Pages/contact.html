@@ -4,8 +4,128 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+    
 </head>
 <body>
-    
+    <div class="contactPage">
+        <header class="contactPage header">
+            <div class="logoContainer">
+                <img class="logo" src="#" alt="logo">
+                <h1><div class="companyName"><span class="the">The</span><span class="nature"> Nature</span><span class="collective"> Collective</span></div></h1>
+            </div>
+            <nav class="navContainer">
+                <a href="#" class="home">Home</a>
+                <br>
+                <hr>
+                <br>
+                <a href="#" class="aboutUs">About us</a>
+                <br>
+                <hr>
+                <br>
+                <a href="#" class="contact">Contact</a>
+                <br>
+                <hr>
+                <br>
+                <a href="#" class="references">References</a>
+                <br>
+                <hr>
+                <br>
+                <a href="#" class="products">Products</a>
+            </nav>
+            <div class="backgroundImg"></div>
+        </header>
+        <main class="mainContactUs">
+             <section class="contactUs">
+                <h2>Contact us</h2>
+                <div class="name">
+                    <h3>Name</h3>
+                    <input type="text" placeholder="Name Surname">
+                </div>
+                <div class="email">
+                    <h3>E-mail</h3>
+                    <input type="email" name="user_email" id="emailinput" placeholder="email@adress.com">
+                </div>
+                <div class="alternatives">
+                    <h3>What can we help you with?</h3>
+                    <div class="radioButtons">
+                        <div class="left">
+                            <div class="top">
+                                <input type="radio" id="purchase" name="help" value="purchase">
+                                <label for="purchase">Purchase of product/service</label><br>
+                            </div>
+                            <div class="bottom">
+                                <input type="radio" id="website" name="help" value="website">
+                                <label for="website">Feedback on the website</label><br>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="top">
+                                <input type="radio" id="company" name="help" value="company">
+                                <label for="company">Questions about the company</label>
+                            </div>
+                            <div class="bottom">
+                                <input type="radio" id="other" name="help" value="other">
+                                <label for="other">Other</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="message">
+                    <h3>Message</h3>
+                    <textarea id="w3review" name="w3review" rows="4" cols="50">
+                    At w3schools.com you will learn how to make a website. They offer free tutorials in all web development technologies.
+                    </textarea>
+                    <button class="submit">Submit</button> 
+                </div>
+             </section>
+             <section class="findUs">
+                <div class="left">
+                    <!-- make uppercase -->
+                    <h2 class="followUs">follow us</h2>
+                    <div class="socialMedias">
+                        <img src="https://nelly.com/_next/static/media/facebook.d8d261aa.svg" alt="fb-logo" class="fb">
+                        <img src="https://nelly.com/_next/static/media/tiktok.320ead66.svg" alt="tiktok-logo" class="tiktok">
+                        <img src="https://nelly.com/_next/static/media/youtube.8791fd00.svg" alt="youtube-logo" class="youtube">
+                        <img src="https://nelly.com/_next/static/media/instagram.8fd27a3f.svg" alt="instagram-logo" class="instagram">
+                        <img src="https://nelly.com/_next/static/media/snapchat.019e3590.svg" alt="snapchat-logo" class="snapchat">
+                    </div>
+                    <div class="adressInfo">
+                        <p class="adress">374 Little Bourke Street, Melbourne
+                            3000, Australia</p>
+                        <p class="tel">Tel: 03 9290 0200</p>
+                        <p class="email">Email: thenature@collective.com.au</p>
+                    </div>
+                    <img src="" alt="map to The Nature Collective adress" class="map">
+                </div>
+                <div class="right">
+                    <img src="" alt="The Nature Collective building" class="building">
+                </div>
+             </section>
+            
+            </main>
+        <footer> 
+            <div class="logoContainerFooter">
+                <img src="#" class="logo" alt="logo">
+            </div>
+            <div class="containerFooter">
+                <div class="footerTop">
+                    <h2 class="uppercase">the nature collective</h2>
+                    <p>Copyright ©</p>
+                </div>
+                <hr>
+                <nav class="footerBottom">
+                    <a href="#" class="home uppercase">home</a>
+                    <a href="#" class="aboutUs uppercase">about us</a>
+                    <a href="#" class="contact uppercase">contact</a>
+                    <a href="#" class="references uppercase">references</a>
+                    <a href="#" class="products uppercase">products</a>
+                </nav>
+            </div>
+            <div class="backgroundImg"></div>
+        </footer>
+    </div>
 </body>
 </html>
