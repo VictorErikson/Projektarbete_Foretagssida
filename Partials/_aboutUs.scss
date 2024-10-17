@@ -16,11 +16,9 @@ body {
 
 
 .wrapper {
-  width: 100vw;
+  width: 90vw;
   .first-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexRow();
     width:100%; 
     background-image: url("/assets/images/About-us/Group-hiking.png");
     padding: 7% 5%;
@@ -63,8 +61,8 @@ body {
         .staff-top,.staff-middle,.staff-bottom {
           display: flex;
           flex-wrap: wrap;
-          justify-content: space-around;
-          width: 100%;
+          justify-content: space-evenly;
+          width: 100vw;
           height: 100%;
           @include desktopAbout {
             @include flexColumn();
@@ -77,6 +75,11 @@ body {
             p {
               font-size: 12px;
             }
+
+            p:first-of-type {
+              margin-top: 0.8rem;
+            }
+        
           .img {
             overflow: hidden;
             width: 130px;
@@ -89,7 +92,7 @@ body {
               object-position: center;
              
             }
-            img.mike {
+            img.mike,.sarah{
               height: 100%;
             }
             
@@ -100,4 +103,3 @@ body {
       }
     }
    
-
