@@ -11,7 +11,8 @@
 body{
     font-family: 'Josefin Sans', sans-serif;
 }
-        
+
+      
 
 .header.productsPage{
     margin-bottom: 30px;
@@ -42,12 +43,20 @@ body{
     }
 };
 
+
+
 main {
     @include flexColumn();
     gap: 30px;
     overflow: hidden;
     width: 100vw;
     
+    @include extraWide {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        }
+
+
     .part1{
 
         @include tablet {
@@ -217,6 +226,9 @@ main {
         }
         @include tablet {
             height: 400px;
+            grid-column: span 2;
+            grid-row-start: 2;
+            grid-column-start: 1;
             }
 
         .info{
@@ -491,6 +503,9 @@ main {
             .footerBottom{
                 a{
                     color: $black;
+                }
+                a:hover{
+                    border-bottom: 1px solid $black;
                 }
             }
         }
