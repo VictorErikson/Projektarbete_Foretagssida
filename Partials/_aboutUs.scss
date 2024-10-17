@@ -62,7 +62,7 @@ body {
           display: flex;
           flex-wrap: wrap;
           justify-content: space-evenly;
-          width: 100vw;
+          width: 100%;
           height: 100%;
           @include desktopAbout {
             @include flexColumn();
@@ -71,7 +71,8 @@ body {
         }
         
         .portrait {
-          width: auto; 
+          width: auto;
+
             p {
               font-size: 12px;
             }
@@ -90,6 +91,7 @@ body {
               width: 100%;
               object-fit: cover;
               object-position: center;
+            
              
             }
             img.mike,.sarah{
@@ -103,3 +105,65 @@ body {
       }
     }
    
+    * {
+      margin: 0;           
+      padding: 0;          
+      box-sizing: border-box; 
+  }
+  
+  
+  hr {
+      border: none;
+      border-top: 1px solid #53545B;
+  
+  }
+  
+  
+  .productsPage{
+    footer {
+        min-height: 124px;
+        position: relative;
+        width: 100%;
+        margin: 0px;
+        padding: 0px;
+        z-index: 0;
+        
+        .backgroundImg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://wallpaperaccess.com/full/686924.jpg');
+            margin-bottom: 0px;
+            // background: $backgroundGrey;
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        .containerFooter{
+
+            position: relative;
+            z-index: 1; 
+            .footerTop{
+                h2, p{
+                    color: $black;
+                }
+            }
+            hr{
+                border: 1px solid $black;
+            }
+            .footerBottom{
+                a{
+                    color: $black;
+                }
+                a:hover{
+                    border-bottom: 1px solid $black;
+                }
+            }
+        }
+    }
+}
