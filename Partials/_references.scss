@@ -22,6 +22,8 @@ body {
     min-height: 100vh;
     width: 100vw;
     background-color: $backgroundGrey;
+    @include flexColumn;
+    gap: 20px;
 
     header .logoContainer {
         margin-top: 0;
@@ -50,6 +52,9 @@ body {
             height: 400px;
             display: flex;
             flex-direction: column;
+            @include desktopAbout {
+                background-image: none;
+            }
             
 
             .catchphrase-container {
