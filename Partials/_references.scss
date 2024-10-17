@@ -22,12 +22,29 @@ body {
     min-height: 100vh;
     width: 100vw;
     background-color: $backgroundGrey;
-    @include flexColumn;
-    gap: 20px;
 
     header .logoContainer {
         margin-top: 0;
+        padding-top: 20px;
     }
+    header .navContainer .home {
+        color: $darkGrey;
+    }
+    header .navContainer .references {
+        color: $green;
+    }
+
+    .main-references {
+        @include flexColumn;
+        gap: 20px;
+        @include desktopAbout {
+            background-image: url('assets/images/references/alex-background.jpeg'); /* Path to the image */
+            background-size: cover; /* This makes the image cover the entire container */
+            background-position: center; /* This centers the image */
+            background-repeat: no-repeat; /* Prevents repeating the image */
+            padding: 20px;
+        }
+
 
     .stars {
         font-size: 0.6rem;
@@ -37,12 +54,7 @@ body {
         margin-top: -50px;
         
     }
-    header .navContainer .home {
-        color: $darkGrey;
-    }
-    header .navContainer .references {
-        color: $green;
-    }
+
 
         .first-box {
             background-image: url('assets/images/references/alex-background.jpeg'); /* Path to the image */
@@ -54,6 +66,7 @@ body {
             flex-direction: column;
             @include desktopAbout {
                 background-image: none;
+                width: 100%;
             }
             
 
@@ -62,6 +75,9 @@ body {
                 margin-top: 5%;
                 padding: 10px;
                 margin-bottom: 5%;
+                @include desktopAbout {
+                    display: none;
+                }
                 
                     .catchphrase {
                         font-family: "Playfair Display", serif;
@@ -69,6 +85,9 @@ body {
                         font-size: 1.1rem;
                         text-align: center;
                         color: $grey;
+                        @include desktopAbout {
+                            display: none;
+                        }
                     }
             }
             .alex-text-box {
@@ -77,6 +96,13 @@ body {
                 width: 40%;
                 padding: 15px;
                 margin-left: 20px;
+        
+                @include desktopAbout {
+                    width: 100%;
+                    margin: 40px;
+                    margin-left: 0;
+                    
+                }
 
                 .q:nth-of-type(1) {
                     margin-bottom: -7px;
@@ -103,6 +129,9 @@ body {
             .empty-div {
                 height: 70%;
                 width: 15%;
+                @include desktopAbout {
+                    display: none;
+                }
             }
         }
 
@@ -116,6 +145,9 @@ body {
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
+            @include desktopAbout {
+                background-image: none;
+            }
         
 
             .margo-text-box {
@@ -148,5 +180,6 @@ body {
                 }
             }
         }
+    }
 
 }
