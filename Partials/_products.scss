@@ -45,7 +45,7 @@ body{
 
 
 
-main {
+.mainProducts {
     @include flexColumn();
     gap: 30px;
     overflow: hidden;

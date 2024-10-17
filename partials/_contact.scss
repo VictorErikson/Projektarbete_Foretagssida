@@ -1,0 +1,130 @@
+//Universal styling
+
+.shopNow{
+    @include shopNow();
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+ 
+
+body.contactPage{
+    background-color: $lightGrey;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+      
+.contactPage{
+    .header.contactPage{
+        margin-bottom: 30px;
+        width: 100vw;
+        position: relative;
+        overflow-x: hidden;
+        
+        .logoContainer{
+            margin-top: 0px;
+        }
+
+        .backgroundImg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300%;
+            background-size: cover; 
+            background-position: right; 
+            background-repeat: no-repeat;
+            height: 100%;
+            background-image: url('https://wallpaperaccess.com/full/686924.jpg');
+            margin-bottom: 0px;
+            // background: $backgroundGrey;
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            opacity: 0.2;
+            z-index: -1;
+        }
+    }
+};
+
+
+.contactPage{
+    width: 100vw;
+    
+
+    .mainContactUs{
+        gap: 3;
+        margin: 0px 5%;
+        width: 100%;
+
+
+        .contactUs{
+
+            .input{
+                #emailinput, #emailinput{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+.contactPage{
+    footer {
+        min-height: 124px;
+        position: relative;
+        width: 100vw;
+        margin: 0px;
+        padding: 0px;
+        z-index: 0;
+        
+        .backgroundImg{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://wallpaperaccess.com/full/686924.jpg');
+            margin-bottom: 0px;
+            // background: $backgroundGrey;
+            background-size: cover; 
+            background-position: center; 
+            background-repeat: no-repeat;
+            opacity: 0.2;
+            z-index: -1;
+        }
+
+        .containerFooter{
+
+            position: relative;
+            z-index: 1; 
+            .footerTop{
+                h2, p{
+                    color: $black;
+                }
+            }
+            hr{
+                border: 1px solid $black;
+            }
+            .footerBottom{
+                a{
+                    color: $black;
+                }
+                a:hover{
+                    border-bottom: 1px solid $black;
+                }
+            }
+        }
+    }
+}
