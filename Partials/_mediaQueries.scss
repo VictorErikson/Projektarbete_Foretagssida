@@ -24,3 +24,11 @@
     @content
     }
 };
+
+@mixin tabletAbout {
+    @media (width > 500px) and (width 799px) {
+    @content
+
+    }
+};
+
