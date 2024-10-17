@@ -65,7 +65,7 @@ body.contactPage{
             .inputContianer{
                 padding-top: 10px;
                 .input{
-
+                    
                     padding-top: 20px;
                     
                     h3{
@@ -75,16 +75,20 @@ body.contactPage{
                     input{
                         padding: 7px;
                         padding-left: 10px;
+                        padding-top: 9px;
                         width: 100%;
                         border-radius: 3px;
                         background-color: $backgroundDarkerGrey;
                         color: $black;
                         border: 1px solid $backgroundDarkerGrey;
-                
+                        font-family: $josefin-font;
+                        font-size: $body;
+
                         &::placeholder{
                             color: $black;
                             opacity: 0.6;
-                            
+                            font-family: $josefin-font;
+                            font-size: $body;
                         }
                     }
                 }
@@ -101,22 +105,28 @@ body.contactPage{
                     padding-top: 20px;
                     @include flexRow();
                     justify-content: flex-start;
+                    flex-wrap: wrap;
 
-                    .right{
-                        padding-left: 40px;
+                    .left{
+                        padding-right: 40px;
                     }
 
-                    .top{
+                    .top, .bottom{
                         padding-bottom: 12px;
+
+                        
                     }
                 }
             }
 
             .message{
-                padding-top: 30px;
+                padding-top: 18px;
+                display: flex;
+                flex-direction: column;
                 h3{
                     font-weight: normal;
                     padding-bottom: 8px;
+                    
                 }
 
                 #messageBox{
@@ -127,15 +137,37 @@ body.contactPage{
                     border-radius: 3px;
                     font-family: $josefin-font;
                     padding: 20px;
-            
+                    font-size: $body;
+                    margin-bottom: 20px;
+
                     &::placeholder{
                         color: $black;
                         opacity: 0.6;
                         font-family: $josefin-font;
+                        font-size: $body;
                         
                     }
                 }
+                .submit{
+                    align-self: center;
+                    
+                    @include shopNow($green);
+                }
                 
+            }
+
+
+        }
+
+        .findUs{
+            display: flex;
+
+            .left{
+                width: 50%;
+            }
+
+            .right{
+                width: 50%;
             }
         }
     }
