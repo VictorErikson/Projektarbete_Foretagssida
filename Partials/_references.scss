@@ -14,6 +14,10 @@ body {
 
 .info-text {
     @include info-text;
+    @include desktopAbout {
+        font-size: 1.4rem;
+        margin-top: 40px;
+    }
 }
 
 
@@ -98,9 +102,10 @@ body {
                 margin-left: 20px;
         
                 @include desktopAbout {
-                    width: 100%;
+                    width: 98%;
                     margin: 40px;
                     margin-left: 0;
+                    background-color: rgba(240, 240, 240, 0.87);
                     
                 }
 
@@ -115,9 +120,18 @@ body {
 
                 h2 {
                     @include nameheader;
+                    @include desktopAbout {
+                        font-size: 2rem;
+                        display: inline-block
+                    }
                 }
                 h3 {
                     @include andteam;
+                    @include desktopAbout {
+                        font-size: 1rem;
+                        display: inline-block
+                    }
+
                 }
                 
                 .stars {
@@ -147,17 +161,22 @@ body {
             justify-content: flex-end;
             @include desktopAbout {
                 background-image: none;
+                justify-content: space-between;
             }
         
 
             .margo-text-box {
                 background-color: rgba(240, 240, 240, 0.85);
                 height: 40%;
-                width: 100%;
+                width: 70%;
                 padding: 15px;
+            
                
                 h2 {
                     @include nameheader;
+                    @include desktopAbout {
+                        font-size: 2rem;
+                    }
                 }
                 h3 {
                     @include andteam;
