@@ -60,30 +60,82 @@ body.contactPage{
 
         .contactUs{
 
+            padding-top: 10px;
+
             .inputContianer{
+                padding-top: 10px;
                 .input{
 
                     padding-top: 20px;
                     
                     h3{
                         padding-bottom: 8px;
+                        font-weight: normal;
                     }
                     input{
-                        padding: 5px;
+                        padding: 7px;
                         padding-left: 10px;
                         width: 100%;
-                        border-radius: 5px;
-                        border-color: $darkGrey;
-                        background-color: $paragraphgrey;
-                        color: white;
-
+                        border-radius: 3px;
+                        background-color: $backgroundDarkerGrey;
+                        color: $black;
+                        border: 1px solid $backgroundDarkerGrey;
+                
                         &::placeholder{
-                            color: white;
-                            opacity: 1;
+                            color: $black;
+                            opacity: 0.6;
                             
                         }
                     }
                 }
+            }
+
+            .alternatives{
+                padding-top: 30px;
+                
+                h3{
+                    font-weight: normal;
+                }
+
+                .radioButtons{
+                    padding-top: 20px;
+                    @include flexRow();
+                    justify-content: flex-start;
+
+                    .right{
+                        padding-left: 40px;
+                    }
+
+                    .top{
+                        padding-bottom: 12px;
+                    }
+                }
+            }
+
+            .message{
+                padding-top: 30px;
+                h3{
+                    font-weight: normal;
+                    padding-bottom: 8px;
+                }
+
+                #messageBox{
+                    width: 100%;
+                    background-color: $backgroundDarkerGrey;
+                    color: $black;
+                    border: 1px solid $backgroundDarkerGrey;
+                    border-radius: 3px;
+                    font-family: $josefin-font;
+                    padding: 20px;
+            
+                    &::placeholder{
+                        color: $black;
+                        opacity: 0.6;
+                        font-family: $josefin-font;
+                        
+                    }
+                }
+                
             }
         }
     }
