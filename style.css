@@ -694,7 +694,6 @@ footer .footerBottom a:hover {
   box-sizing: border-box;
 }
 
-
 body {
   overflow-x: hidden;
 }
@@ -950,12 +949,13 @@ body {
 }
 
 .wrapper {
-  width: 100vw;
+  width: 90vw;
 }
 .wrapper .first-section {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: row;
   width: 100%;
   background-image: url("/assets/images/About-us/Group-hiking.png");
   padding: 7% 5%;
@@ -1001,7 +1001,7 @@ body {
 .wrapper .second-section .staff .staff-top, .wrapper .second-section .staff .staff-middle, .wrapper .second-section .staff .staff-bottom {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   width: 100%;
   height: 100%;
 }
@@ -1020,6 +1020,9 @@ body {
 .wrapper .second-section .staff .portrait p {
   font-size: 12px;
 }
+.wrapper .second-section .staff .portrait p:first-of-type {
+  margin-top: 0.8rem;
+}
 .wrapper .second-section .staff .portrait .img {
   overflow: hidden;
   width: 130px;
@@ -1032,14 +1035,61 @@ body {
 }
 .wrapper .second-section .staff .portrait .img img {
   width: 100%;
-
-
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
 }
-.wrapper .second-section .staff .portrait .img img.mike {
+.wrapper .second-section .staff .portrait .img img.mike, .wrapper .second-section .staff .portrait .img .sarah {
   height: 100%;
+}
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #53545B;
+}
+
+.productsPage footer {
+  min-height: 124px;
+  position: relative;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  z-index: 0;
+}
+.productsPage footer .backgroundImg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://wallpaperaccess.com/full/686924.jpg");
+  margin-bottom: 0px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  z-index: -1;
+}
+.productsPage footer .containerFooter {
+  position: relative;
+  z-index: 1;
+}
+.productsPage footer .containerFooter .footerTop h2, .productsPage footer .containerFooter .footerTop p {
+  color: #000000;
+}
+.productsPage footer .containerFooter hr {
+  border: 1px solid #000000;
+}
+.productsPage footer .containerFooter .footerBottom a {
+  color: #000000;
+}
+.productsPage footer .containerFooter .footerBottom a:hover {
+  border-bottom: 1px solid #000000;
 }/*# sourceMappingURL=style.css.map */
