@@ -55,15 +55,34 @@ body.contactPage{
 
     .mainContactUs{
         gap: 3;
-        margin: 0px 5%;
+        padding: 0px 10%;
         width: 100%;
-
 
         .contactUs{
 
-            .input{
-                #emailinput, #emailinput{
-                    width: 100%;
+            .inputContianer{
+                .input{
+
+                    padding-top: 20px;
+                    
+                    h3{
+                        padding-bottom: 8px;
+                    }
+                    input{
+                        padding: 5px;
+                        padding-left: 10px;
+                        width: 100%;
+                        border-radius: 5px;
+                        border-color: $darkGrey;
+                        background-color: $paragraphgrey;
+                        color: white;
+
+                        &::placeholder{
+                            color: white;
+                            opacity: 1;
+                            
+                        }
+                    }
                 }
             }
         }
