@@ -694,15 +694,15 @@ footer .footerBottom a:hover {
   box-sizing: border-box;
 }
 
-
 body {
   overflow-x: hidden;
 }
 
 .q {
   font-family: "Playfair Display", serif;
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: 500;
+  color: #53545B;
   display: inline-block;
 }
 
@@ -711,6 +711,8 @@ body {
   font-weight: 500;
   color: #53545B;
   font-size: 0.8rem;
+  z-index: 100;
+  margin-top: -30px;
 }
 
 .ref-wrapper {
@@ -722,6 +724,8 @@ body {
   font-size: 0.6rem;
   color: #3AAE72;
   text-align: center;
+  z-index: 1000;
+  margin-top: -50px;
 }
 .ref-wrapper .first-box {
   background-image: url("assets/images/references/alex-background.jpeg"); /* Path to the image */
@@ -752,11 +756,12 @@ body {
   padding: 15px;
   margin-left: 20px;
 }
-.ref-wrapper .first-box .alex-text-box .info-text {
-  margin-top: -15px;
+.ref-wrapper .first-box .alex-text-box .q:nth-of-type(1) {
+  margin-bottom: -7px;
 }
 .ref-wrapper .first-box .alex-text-box .q:nth-of-type(2) {
-  margin-left: 92%;
+  margin-left: 85%;
+  margin-top: -20px;
 }
 .ref-wrapper .first-box .alex-text-box h2 {
   font-family: "JosefinSans", sans-serif;
@@ -774,7 +779,7 @@ body {
   text-indent: 68px;
 }
 .ref-wrapper .first-box .alex-text-box .stars {
-  margin-top: -10px;
+  margin-top: -55px;
 }
 .ref-wrapper .first-box .empty-div {
   height: 70%;
@@ -810,6 +815,12 @@ body {
   font-size: 0.7rem;
   text-transform: uppercase;
   text-indent: 68px;
+}
+.ref-wrapper .second-box .margo-text-box .margo-text .info-text {
+  color: red;
+}
+.ref-wrapper .second-box footer {
+  margin-top: 20px;
 }
 
 * {
@@ -824,8 +835,9 @@ body {
 
 .q {
   font-family: "Playfair Display", serif;
-  font-size: 2rem;
+  font-size: 4rem;
   font-weight: 500;
+  color: #53545B;
   display: inline-block;
 }
 
@@ -834,6 +846,8 @@ body {
   font-weight: 500;
   color: #53545B;
   font-size: 0.8rem;
+  z-index: 100;
+  margin-top: -30px;
 }
 
 .ref-wrapper {
@@ -845,6 +859,8 @@ body {
   font-size: 0.6rem;
   color: #3AAE72;
   text-align: center;
+  z-index: 1000;
+  margin-top: -50px;
 }
 .ref-wrapper .first-box {
   background-image: url("assets/images/references/alex-background.jpeg"); /* Path to the image */
@@ -875,11 +891,12 @@ body {
   padding: 15px;
   margin-left: 20px;
 }
-.ref-wrapper .first-box .alex-text-box .info-text {
-  margin-top: -15px;
+.ref-wrapper .first-box .alex-text-box .q:nth-of-type(1) {
+  margin-bottom: -7px;
 }
 .ref-wrapper .first-box .alex-text-box .q:nth-of-type(2) {
-  margin-left: 92%;
+  margin-left: 85%;
+  margin-top: -20px;
 }
 .ref-wrapper .first-box .alex-text-box h2 {
   font-family: "JosefinSans", sans-serif;
@@ -897,7 +914,7 @@ body {
   text-indent: 68px;
 }
 .ref-wrapper .first-box .alex-text-box .stars {
-  margin-top: -10px;
+  margin-top: -55px;
 }
 .ref-wrapper .first-box .empty-div {
   height: 70%;
@@ -933,6 +950,12 @@ body {
   font-size: 0.7rem;
   text-transform: uppercase;
   text-indent: 68px;
+}
+.ref-wrapper .second-box .margo-text-box .margo-text .info-text {
+  color: red;
+}
+.ref-wrapper .second-box footer {
+  margin-top: 20px;
 }
 
 * {
@@ -1032,8 +1055,6 @@ body {
 }
 .wrapper .second-section .staff .portrait .img img {
   width: 100%;
-
-
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -1041,5 +1062,4 @@ body {
 }
 .wrapper .second-section .staff .portrait .img img.mike {
   height: 100%;
-
 }/*# sourceMappingURL=style.css.map */
