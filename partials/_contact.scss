@@ -1,8 +1,5 @@
 //Universal styling
 
-.shopNow{
-    @include shopNow();
-}
 
 .uppercase{
     text-transform: uppercase;
@@ -58,9 +55,17 @@ body.contactPage{
         padding: 0px 10%;
         width: 100%;
 
-        .contactUs{
+        @include desktop(){
+            display: flex;
+            flex-direction: row;
+        }
 
+        .contactUs{
             padding-top: 10px;
+
+            @include desktop(){
+                width: 50%;
+            }
 
             .inputContianer{
                 padding-top: 10px;
@@ -123,6 +128,7 @@ body.contactPage{
                 padding-top: 18px;
                 display: flex;
                 flex-direction: column;
+
                 h3{
                     font-weight: normal;
                     padding-bottom: 8px;
@@ -151,7 +157,7 @@ body.contactPage{
                 .submit{
                     align-self: center;
                     
-                    @include shopNow($green);
+                    @include shopNow($green, $black); 
                 }
                 
             }
@@ -161,13 +167,78 @@ body.contactPage{
 
         .findUs{
             display: flex;
+            width: 100%;
+            gap: 5%;
+            padding: 100px 0px;
+            // height: 530px;
+            height: calc(50vw*2);
+
+            @include desktop(){
+                width: 50%;
+            }
+
+            @include extraSmall(){
+                flex-direction: column;
+                height: 100%;
+            }
 
             .left{
                 width: 50%;
+                @include flexColumn(space-between, flex-start);
+
+                @include extraSmall(){
+                    width: 100%;
+                }
+
+                .followUsContainer{
+                    @include flexColumn(space-between, flex-start);
+                    height: 200px;
+                    width: 100%;
+
+                    .followUs{
+                        align-self: center;
+                    }
+
+                    .socialMedias{
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: row;
+                        width: 100%;
+                    }
+                }
+
+                .mapSizing{
+                    width: 100%;
+                    height: auto;
+                    overflow: hidden;
+
+                    @include extraSmall(){
+                        height: 400px;
+                    }
+
+                    .map{
+                        object-fit: cover;
+                        object-position: bottom;
+                    }
+                }
+                
             }
 
             .right{
                 width: 50%;
+                overflow: hidden;
+                height: 100%;
+
+                @include extraSmall(){
+                    width: 100%;
+                    height: 400px;
+                }
+
+                img{
+                    object-fit: cover;
+                    object-position: center ;
+                    
+                }
             }
         }
     }
