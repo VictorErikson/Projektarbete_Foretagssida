@@ -29,8 +29,8 @@ body {
     width: 100vw;
     background-color: $backgroundGrey;
 
-    .footer-hr {
-        background-color: $lightGrey;
+    hr {
+        background-color: $darkGrey;
         border: none;
         border-bottom: none;
         height: 1px;
