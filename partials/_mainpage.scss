@@ -28,14 +28,11 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
-    height: 100vh;
+    height: 100%;
     width: 100vw;
 
+
     .gradient-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
         width: 100%;
         min-height: 100vh;
         background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
@@ -45,7 +42,7 @@
     main {
 
         .catchphrase-container {
-            background-color: rgba(240, 240, 240, 0.6);
+            background-color: rgba(240, 240, 240, 0.8);
             width: 100%;
             text-align: center;
             padding: 7px;
@@ -53,21 +50,60 @@
             .catchphrase {
                 font-family: "Playfair Display", serif;
                 font-weight: 300;
-                font-size: 1.5rem;
+                font-size: 1rem;
                 
             }
         
     }
 
-        .productsStartpage1, .productsStartpage2{
-            .wrapper {
-                .product {
-                    max-width: 20%;
+        .button button {
+            @include shopNow();
+            display: block;
+            margin:auto;
+            margin-top:10%;
+            margin-bottom:10%;
+        }
+        .products {
+            display: flex;
+            flex-direction: column; 
+            .productsStartpage1, .productsStartpage2{
+                display: flex;
+                flex-direction: row;
+                margin-top: 5%; 
+                background-color: rgba(240,240,240,0.8); 
+                .wrapper {
+                    width: 100%;
+                    padding: 30px 20px;
+                    position: relative;
+                    @include flexColumn();
+
+                    .logobackground {
+                        background-color: $lightGrey;
+                        @include flexRow();
+                        width: 100%;
+                        height: 25px;
+                        .logo {
+                            height: 100%;
+                            width: 30%;
+                          }
+                    }
+                   
+                    .product {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        
+                        img.hikingGear {
+                            
+                        }
+                    }
                 }
             }
+    
         }
-
+       
     }
     
 }
+
 
