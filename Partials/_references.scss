@@ -237,6 +237,34 @@ body {
                 }
                
         }
+
+        .third-box {
+            background-image: url('assets/images/references/steve-jacobson.jpg'); /* Path to the image */
+            background-size: cover; /* This makes the image cover the entire container */
+            background-position: center; /* This centers the image */
+            background-repeat: no-repeat; /* Prevents repeating the image */
+            height: 600px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 20px;
+            margin-bottom: 30px;
+            @include desktopReferences {
+                background-image: none;
+                justify-content: space-between;
+            }
+
+                .steve-text-box {
+                    background-color: $lightGrey;
+                    height: 98%;
+                    width: 50%;
+                    padding: 15px;
+                    @include flexColumn;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                }
+            }
         
     }
     footer {
