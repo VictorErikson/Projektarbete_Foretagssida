@@ -9,12 +9,27 @@
 body.contactPage{
     background-color: $lightGrey;
     font-family: 'Josefin Sans', sans-serif;
+
 }
 
 
       
 .contactPage{
-    .header.contactPage{
+
+    @include desktop{
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    @include tablet{
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .header.contactPageHeader{
         margin-bottom: 30px;
         width: 100vw;
         position: relative;
@@ -46,25 +61,40 @@ body.contactPage{
 };
 
 
-.contactPage{
+.contactPageBody{
     width: 100vw;
-    
+    height: 100vh;
 
     .mainContactUs{
-        gap: 3;
+        gap: 5%;
         padding: 0px 10%;
         width: 100%;
-
-        @include desktop(){
+        height: 100%;
+        
+        @include tablet(){
             display: flex;
             flex-direction: row;
+            align-items: stretch;
+            padding-bottom: 40px;
+        }
+
+        @include desktop(){
+            height: auto;
+            align-items: flex-start;
         }
 
         .contactUs{
             padding-top: 10px;
 
+            @include tablet(){
+                width: 40%;
+                
+            }
+
             @include desktop(){
-                width: 50%;
+                height: 626px;
+                flex-grow: 0;
+
             }
 
             .inputContianer{
@@ -129,6 +159,10 @@ body.contactPage{
                 display: flex;
                 flex-direction: column;
 
+                @include desktop(){
+                    padding-top: auto;
+                }
+
                 h3{
                     font-weight: normal;
                     padding-bottom: 8px;
@@ -169,18 +203,30 @@ body.contactPage{
             display: flex;
             width: 100%;
             gap: 5%;
-            padding: 100px 0px;
+            padding-top: 100px;
             // height: 530px;
-            height: calc(50vw*2);
-
-            @include desktop(){
-                width: 50%;
-            }
+            height: calc(50vw + 300px);
 
             @include extraSmall(){
                 flex-direction: column;
                 height: 100%;
+                
             }
+
+            @include tablet(){
+                width: 60%;
+                padding: 0px;
+                flex: 1;
+                height: auto;
+            }
+
+            @include desktop(){
+                height: 626px;
+
+                
+            }
+
+            
 
             .left{
                 width: 50%;
@@ -190,13 +236,20 @@ body.contactPage{
                     width: 100%;
                 }
 
+                @include tablet(){
+                    justify-content: flex-start;
+                    align-items: stretch;
+                    flex: 1;
+                }
+
                 .followUsContainer{
                     @include flexColumn(space-between, flex-start);
-                    height: 200px;
+                    min-height: 60%;
                     width: 100%;
 
                     .followUs{
                         align-self: center;
+                        padding-bottom: 20px;
                     }
 
                     .socialMedias{
@@ -204,6 +257,13 @@ body.contactPage{
                         justify-content: space-between;
                         flex-direction: row;
                         width: 100%;
+                    }
+
+                    .adressInfo{
+                        padding: 20px 0px;
+                        p{
+                            line-height: 1.5;
+                        }
                     }
                 }
 
@@ -215,10 +275,19 @@ body.contactPage{
                     @include extraSmall(){
                         height: 400px;
                     }
+                    @include tablet(){
+                        flex-grow: 1;
+                    }
 
                     .map{
                         object-fit: cover;
-                        object-position: bottom;
+                        object-position: center;
+                        width: 100%;
+                        height: 100%;
+
+                        @include desktop(){
+                            max-height: 100%;
+                        }
                     }
                 }
                 
@@ -232,12 +301,23 @@ body.contactPage{
                 @include extraSmall(){
                     width: 100%;
                     height: 400px;
+                    padding-top: 20px;
+                }
+
+                @include tablet(){
+                    height: auto;
+                    flex-grow: 1;
                 }
 
                 img{
                     object-fit: cover;
                     object-position: center ;
-                    
+                    width: 100%;
+                    height: 100%;
+
+                    @include desktop(){
+                        max-height: 100%;
+                    }
                 }
             }
         }
