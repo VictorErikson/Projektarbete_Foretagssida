@@ -52,3 +52,15 @@
     }
 };
 
+@mixin tabletReferences {
+    @media (min-width: 451px) and (max-width: 899px) {
+        @content;
+    }
+}
+
+
+@mixin desktopReferences {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
