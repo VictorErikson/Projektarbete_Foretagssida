@@ -1,62 +1,96 @@
-* {
-    margin: 0;           
-    padding: 0;          
-    box-sizing: border-box; 
-}
 
 
-hr {
-    border: none;
-    border-top: 1px solid #f0f0f0;
-
-}
 
 
 footer {
     font-family: 'Josefin Sans', sans-serif;
     @include flexRow;
-    margin-top: auto;
-    margin-bottom: 20px;
+    // margin-top: auto;
+    // margin-bottom: 20px;
+    min-height: 124px;
+    position: relative;
+    width: 100vw;
+    margin: 0px;
+    padding: 0px;
+    z-index: 0;
 
-
-    h2 {
-        font-weight: 350;
-        font-size: 1.2rem;
-        color: #f0f0f0;
-        text-transform: uppercase;
+    .logoContainerFooter{
+        transform: scale(1.5);
+        margin-right: 5px;
+        margin-bottom: -5px;
     }
 
-    p{
-        color: #f0f0f0;
-        font-weight: 200;
-        font-size: 0.7rem;
+    .containerFooter{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-    }
+        .footerTop {
+            @include flexRow;
+            column-gap: 10px;
+            justify-content: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
 
-    a {
-        font-weight: 500;
-        text-decoration: none;
-        color: #f0f0f0;
-        text-transform: uppercase;
-    }
+            @media ( width < 295px){
+                text-align: center
+            }
+            
+            h2 {
+                font-weight: 350;
+                font-size: 1.2rem;
+                color: #f0f0f0;
+                text-transform: uppercase;
+            }
+        
+            .copyright {
+                color: #f0f0f0;
+                font-weight: 400;
+                font-size: 0.7rem;
+                padding-right: 10px;
+                align-self: flex-end;
 
-    .footerTop {
-        @include flexRow;
-        column-gap: 30px;
-        justify-content: space-between;
-        margin-bottom: 10px;
-    }
-
-    .footerBottom {
-        @include flexRow;
-        justify-content: space-between;
-        margin-top: 10px;
-
-        a {
-            font-size: 0.7rem;
+                @media ( width < 378px){
+                    content: "©";
+                    padding-top: 5px;
+                }
+            }
         }
-        a:hover {
-            border-bottom: 1px solid #f0f0f0;
+
+        hr {
+            border: none;
+            border-top: 1px solid #f0f0f0;
+            width: 110%;
+            padding-right: 10px;
+            
         }
+
+        .footerBottom{
+            @include flexRow;
+            justify-content: center;
+            margin-top: 10px;
+            flex-wrap: wrap;
+
+            
+            .footerLink{
+                font-weight: 500;
+                text-decoration: none;
+                color: #f0f0f0;
+                text-transform: uppercase;
+                font-size: 0.7rem;
+                margin-right: 10px;
+                border-bottom: 1px solid rgba($color: #000000, $alpha: 0);
+                transition-duration: 0.2s;
+
+                &:hover {
+                    border-bottom: 1px solid #f0f0f0;
+                    transform: scale(1.2);
+                }
+
+            }
+            
+        }
+
+        
     }
 }
