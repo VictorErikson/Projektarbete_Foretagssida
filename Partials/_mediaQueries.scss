@@ -6,7 +6,17 @@
     
     }
     
-    };
+};
+
+@mixin desktop {
+
+    @media (width > 1300px) {
+    
+    @content
+    
+    }
+    
+};
 
 @mixin tablet {
 
@@ -16,7 +26,17 @@
     
     }
     
-    };
+};
+
+@mixin extraSmall {
+
+    @media (width < 436px) {
+    
+    @content
+    
+    }
+    
+};
 
 
 @mixin desktopAbout { 
@@ -26,7 +46,7 @@
 };
 
 @mixin tabletAbout {
-    @media (width > 500px) and (width 799px) {
+    @media (width > 500px) and (width < 799px) {
     @content
 
     }
