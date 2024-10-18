@@ -51,10 +51,10 @@ body{
     overflow: hidden;
     width: 100vw;
     
-    @include extraWide {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        }
+    // @include extraWide {
+    //     display: grid;
+    //     grid-template-columns: 1fr 1fr;
+    //     }
 
 
     .part1{
@@ -463,7 +463,7 @@ body{
 
 }
 
-.productsPage{
+.productsPageFooter{
     footer {
         min-height: 124px;
         position: relative;
