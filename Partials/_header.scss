@@ -3,6 +3,9 @@
 header {
     width: 100%;
     font-family: 'Josefin Sans', sans-serif;
+
+    @include flexRow($justify: space-between, $align: center);
+    
  
     span {
         text-transform: uppercase;
@@ -17,22 +20,50 @@ header {
         font-weight: 650;
     }
 
-    a:first-of-type {
-        color: $green;
-    }
+    // a:first-of-type {
+    //     color: $green;
+    // }
 
     .logoContainer {
         @include flexColumn;
         margin-top: 20px;
         gap: 20px;
 
-        h1  .companyName {
-            @include flexColumn;
-            gap: 10px;
-            margin-bottom: 20px;
+        @include desktopAbout {
+            @include flexRow;
         }
-        .the {
-            font-size: 1rem;
+
+        .companyCatchphraseContainer {
+            
+            @include desktopAbout {
+                @include flexColumn;
+                align-items: flex-start;
+            }
+            .companyName {
+                @include flexColumn;
+                gap: 10px;
+                margin-bottom: 20px;
+                @include desktopAbout {
+                    @include flexRow;
+                    
+                }
+        
+            }
+            .the {
+                font-size: 1rem;
+
+                @include desktopAbout {
+                    font-size: 32px;
+                    font-weight: 400;
+                }
+            }
+            .catchphrase {
+                display:none;
+
+                @include desktopAbout {
+                    display: block;
+                }
+            }
         }
     }
 
@@ -41,13 +72,39 @@ header {
         background-color: rgba(240, 240, 240, 0.6);
         padding: 20px;
         line-height: 12px;
+        transition: transform 0.3s ease-in-out;
+
+        @include desktopAbout {
+            @include flexRow;
+            justify-content: space-between;
+            padding: 0px;
+            background-color: transparent;
+        }
 
         hr {
             border: none; /* Remove default border */
             height: 1px; /* Set height of the line */
             background: linear-gradient(to right, transparent, $darkGrey, transparent); /* Create a gradient */
             width: 80%; /* Set the full width */
-            margin: 0; /* Add some space around the hr */
+            margin: 10px 0px 13px 0px;
+
+            @include desktopAbout {
+                display: none;
+            }
+        }
+
+        a{
+            @include desktopAbout {
+                margin: 0px 10px;
+            }
+        }
+
+        a:hover {
+            color: darken($green, 10%);
+            
+            transform: scale(1.2);
+            // opacity: 0.6;
+            cursor: pointer;
         }
     }
 }
