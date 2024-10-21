@@ -5,19 +5,14 @@
 }
 
 body {
-  font-family: 'Josefin Sans', sans-serif;
-
+  font-family: "Josefin Sans", sans-serif;
 }
-
-
-
-
 
 .wrapper {
   width: 100vw;
   .first-section {
     @include flexRow();
-    width:100vw; 
+    width: 100vw;
     background-image: url("/assets/images/About-us/Group-hiking.png");
     padding: 7% 5%;
     background-position: center;
@@ -32,148 +27,143 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 5%; 
-  
+      padding: 5%;
+
       .history-heading {
         align-self: flex-start;
         margin-bottom: 0.5rem;
       }
-    
+    }
   }
-  } 
-  
+
   .second-section {
     padding: 5%;
-    background-color: #FFFF;
+    background-color: #ffff;
     margin: 7% 5%;
     box-sizing: border-box;
     width: auto;
-    .staff { 
+    .staff {
       @include flexColumn();
+      justify-content: space-evenly;
+      align-items: center;
+      @include desktopAbout {
+        flex-direction: row;
+      }
+
+      .staff-top,
+      .staff-middle,
+      .staff-bottom {
+        display: flex;
+        flex-wrap: wrap;
         justify-content: space-evenly;
-        align-items: center;
+        width: 100%;
+        height: 100%;
         @include desktopAbout {
-          flex-direction: row;
+          @include flexColumn();
+          flex-wrap: nowrap;
+        }
+      }
+
+      .portrait {
+        width: auto;
+        padding: 0.2rem;
+
+        p {
+          font-size: 12px;
         }
 
-        .staff-top,.staff-middle,.staff-bottom {
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-evenly;
-          width: 100%;
-          height: 100%;
-          @include desktopAbout {
-            @include flexColumn();
-            flex-wrap: nowrap;
-          }
+        p:first-of-type {
+          margin-top: 0.8rem;
         }
-        
-        .portrait {
-          width: auto;
-          padding: 0.2rem;
 
-            p {
-              font-size: 12px;
-            }
-
-            p:first-of-type {
-              margin-top: 0.8rem;
-            }
-        
-          .img {
-            overflow: hidden;
-            width: 130px;
-            height: 130px;
-            @include flexRow();
-            margin-top: 1rem;
-            @include tabletAbout {
-              width: 250px;
-              height: 250px;
-            }
-
-            img {
-              width: 100%;
-              object-fit: cover;
-              object-position: center;
-             
-            }
-            img.mike,.sarah{
-              height: 100%;
-            }
-            
+        .img {
+          overflow: hidden;
+          width: 130px;
+          height: 130px;
+          @include flexRow();
+          margin-top: 1rem;
+          @include tabletAbout {
+            width: 250px;
+            height: 250px;
           }
 
+          img {
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+          }
+          img.mike,
+          .sarah {
+            height: 100%;
           }
         }
       }
     }
-   
-    * {
-      margin: 0;           
-      padding: 0;          
-      box-sizing: border-box; 
   }
-  
-  
-  hr {
-      border: none;
-      border-top: 1px solid #53545B;
-  
-  }
-  
-  
-  .wrapper{
-    footer {
-        min-height: 124px;
-        position: relative;
-        width: 100vw;
-        margin: 0px;
-        padding: 20px;
-        z-index: 0;
-        left: 0;
-
-        h2.uppercase {
-          white-space: nowrap;
-        }
-        
-        .backgroundImg{
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100%;
-            background-image: url('https://wallpaperaccess.com/full/686924.jpg');
-            margin-bottom: 0px;
-            // background: $backgroundGrey;
-            background-size: cover; 
-            background-position: center; 
-            background-repeat: no-repeat;
-            opacity: 0.2;
-            z-index: -1;
-        }
-
-        .containerFooter{
-
-            position: relative;
-            z-index: 1; 
-            .footerTop{
-                h2, p{
-                    color: $black;
-                    white-space: nowrap;
-                }
-            }
-            hr{
-                border: 1px solid $black;
-            }
-            .footerBottom{
-                a{
-                    color: $black;
-                }
-                a:hover{
-                    border-bottom: 1px solid $black;
-                }
-            }
-        }
-    }
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #53545b;
+}
+
+.wrapper {
+  footer {
+    min-height: 124px;
+    position: relative;
+    width: 100vw;
+    margin: 0px;
+    padding: 20px;
+    z-index: 0;
+    left: 0;
+
+    h2.uppercase {
+      white-space: nowrap;
+    }
+
+    .backgroundImg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100%;
+      background-image: url("https://wallpaperaccess.com/full/686924.jpg");
+      margin-bottom: 0px;
+      // background: $backgroundGrey;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      opacity: 0.2;
+      z-index: -1;
+    }
+
+    .containerFooter {
+      position: relative;
+      z-index: 1;
+      .footerTop {
+        h2,
+        p {
+          color: $black;
+          white-space: nowrap;
+        }
+      }
+      hr {
+        border: 1px solid $black;
+      }
+      .footerBottom {
+        a {
+          color: $black;
+        }
+        a:hover {
+          border-bottom: 1px solid $black;
+        }
+      }
+    }
+  }
+}
