@@ -29,19 +29,9 @@ body {
     width: 100vw;
     background-color: $backgroundGrey;
 
-    header .logo {
-        margin-bottom: -20px;
-    }
 
     header .logoContainer {
         margin-top: 0;
-        padding-top: 20px;
-    }
-    header .navContainer .home, header .navContainer .aboutUs {
-        color: $darkGrey;
-    }
-    header .navContainer .references {
-        color: $green;
     }
 
     .main-references {
