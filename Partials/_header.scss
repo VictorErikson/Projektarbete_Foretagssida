@@ -1,13 +1,26 @@
 // Put this in your header with a personal classname
 
-header{
+.headerContact{
     .navContainer{
-        .home{
+        .contact{
             color: $green;
 
             @include desktopHeader {
                 color: white;
                 background: $green;
+            }
+
+            &:hover {
+                color: darken($green, 10%);
+                transform: scale(1.2);
+                cursor: pointer;
+    
+                @include desktopHeader {
+                    color: white;
+                    background: $green;
+                    transform: scale(1);
+                    cursor: auto;    
+                }
             }
         }
     }
@@ -150,7 +163,7 @@ header {
 }
 
 // header with background image
-.header.backgroundHeader{
+.backgroundHeader{
     margin-bottom: 30px;
     width: 100vw;
     position: relative;
