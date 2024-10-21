@@ -12,6 +12,33 @@ body{
     font-family: 'Josefin Sans', sans-serif;
 }
 
+.headerProducts{
+    .navContainer{
+        .products{
+            color: $green;
+
+            @include desktopHeader {
+                color: white;
+                background: $green;
+            }
+
+            &:hover {
+                color: $green;
+                transform: scale(1);
+                cursor: default;
+    
+                @include desktopHeader {
+                    color: white;
+                    background: $green;
+                    transform: scale(1);
+                    cursor: default;    
+                }
+            }
+        }
+    }
+}
+
+
 
 .mainProducts {
     @include flexColumn();
