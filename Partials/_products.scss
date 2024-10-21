@@ -12,36 +12,31 @@ body{
     font-family: 'Josefin Sans', sans-serif;
 }
 
-      
+.headerProducts{
+    .navContainer{
+        .products{
+            color: $green;
 
-.header.productsPage{
-    margin-bottom: 30px;
-    width: 100vw;
-    position: relative;
-    overflow-x: hidden;
-    .logoContainer{
-        margin-top: 0px;
-    }
+            @include desktopHeader {
+                color: white;
+                background: $green;
+            }
 
-    .backgroundImg{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 300%;
-        background-size: cover; 
-        background-position: right; 
-        background-repeat: no-repeat;
-        height: 100%;
-        background-image: url('https://wallpaperaccess.com/full/686924.jpg');
-        margin-bottom: 0px;
-        // background: $backgroundGrey;
-        background-size: cover; 
-        background-position: center; 
-        background-repeat: no-repeat;
-        opacity: 0.2;
-        z-index: -1;
+            &:hover {
+                color: $green;
+                transform: scale(1);
+                cursor: default;
+    
+                @include desktopHeader {
+                    color: white;
+                    background: $green;
+                    transform: scale(1);
+                    cursor: default;    
+                }
+            }
+        }
     }
-};
+}
 
 
 
@@ -462,52 +457,3 @@ body{
     }
 
 }
-
-// .productsPageFooter{
-//     footer {
-
-//         .backgroundImg{
-//             position: absolute;
-//             top: 0;
-//             left: 0;
-//             width: 100%;
-//             height: 100%;
-//             background-image: url('https://wallpaperaccess.com/full/686924.jpg');
-//             margin-bottom: 0px;
-//             // background: $backgroundGrey;
-//             background-size: cover; 
-//             background-position: center; 
-//             background-repeat: no-repeat;
-//             opacity: 0.2;
-//             z-index: -1;
-//         }
-
-//         .containerFooter{
-
-//             position: relative;
-//             z-index: 1; 
-            
-//             .footerTop{
-//                 border-bottom: 1px solid $black;
-//                 h2, p{
-//                     color: $black;
-                    
-//                 }
-//             }
-           
-//             .footerBottom{
-//                 a{
-//                     color: $black;
-//                 }
-//                 a:hover{
-//                     border-bottom: 1px solid $black;
-                    
-//                     @media ( width < 464px){
-//                         border-bottom: 1px solid rgba($color: #000000, $alpha: 0);      
-//                     }
-//                 }
-                
-//             }
-//         }
-//     }
-// }

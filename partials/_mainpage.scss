@@ -35,7 +35,7 @@
     .gradient-overlay {
         width: 100%;
         min-height: 100vh;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
         z-index: 1; 
     }
 
@@ -63,40 +63,40 @@
             margin-top:10%;
             margin-bottom:10%;
         }
-        .products {
-            display: flex;
-            flex-direction: column; 
             .productsStartpage1, .productsStartpage2{
                 display: flex;
                 flex-direction: row;
+                justify-content: space-between;
                 margin-top: 5%; 
                 background-color: rgba(240,240,240,0.8); 
                 .wrapper {
                     width: 100%;
-                    padding: 30px 20px;
+                    padding: 20px;
+                    display: flex;
+                    flex-direction: column-reverse;
+                    align-items: center;
                     position: relative;
-                    @include flexColumn();
 
                     .logobackground {
                         background-color: $lightGrey;
                         @include flexRow();
                         width: 100%;
-                        height: 25px;
+                        height: 20px;
+                        position:absolute;
+                        bottom:24px;
+                
+                    
                         .logo {
-                            height: 100%;
-                            width: 30%;
+                            max-height: 100%;
+                            max-width: 100%;
                           }
                     }
                    
                     .product {
-                        width: 100%;
+                        width:100%;
                         height: 100%;
                         object-fit: cover;
-                        
-                        img.hikingGear {
-                            
-                        }
-                    }
+                  
                 }
             }
     
@@ -105,5 +105,3 @@
     }
     
 }
-
-

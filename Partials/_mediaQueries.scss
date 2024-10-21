@@ -64,3 +64,9 @@
         @content;
     }
 }
+
+@mixin desktopHeader { 
+    @media (width > 1130px) {
+    @content
+    }
+};
