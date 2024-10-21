@@ -65,14 +65,10 @@
         }
             .productsStartpage1, .productsStartpage2{
                 display: flex;
-                flex-wrap: nowrap;
+                flex-wrap: wrap;
                 justify-content: center;
                 margin-top: 5%; 
                 background-color: rgba(240,240,240,0.8); 
-
-            @include desktop {
-                flex-wrap: nowrap;
-            }
 
                 .wrapper {
                     width: 100%;
