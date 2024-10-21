@@ -1,9 +1,8 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
 
 // body {
 //     min-height: 100vh;
@@ -14,98 +13,98 @@
 // }
 
 .wrapper-content {
-    font-family: 'JosefinSans', sans-serif; 
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    row-gap: 50px;
+  font-family: "JosefinSans", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 50px;
 }
 
 .background {
-    background: url(assets/images/homePage/mountains.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100%;
-    width: 100vw;
+  background: url(assets/images/homePage/mountains.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100%;
+  width: 100vw;
 
+  .gradient-overlay {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.2),
+      rgba(255, 255, 255, 0)
+    );
+    z-index: 1;
+  }
 
-    .gradient-overlay {
+  main {
+    .catchphrase-container {
+      background-color: rgba(240, 240, 240, 0.8);
+      width: 100%;
+      text-align: center;
+      padding: 7px;
+
+      .catchphrase {
+        font-family: "Playfair Display", serif;
+        font-weight: 300;
+        font-size: 1rem;
+      }
+    }
+
+    .button button {
+      @include shopNow();
+      display: block;
+      margin: auto;
+      margin-top: 10%;
+      margin-bottom: 10%;
+    }
+    .productsStartpage1,
+    .productsStartpage2 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 5%;
+      background-color: rgba(240, 240, 240, 0.8);
+
+      @include desktopAbout {
+        flex-wrap: nowrap;
+      }
+
+      .wrapper {
         width: 100%;
-        min-height: 100vh;
-        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
-        z-index: 1; 
-    }
+        margin: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+        align-items: center;
+        aspect-ratio: 2/1.5;
+        position: relative;
+        padding-top: 10px;
 
-    main {
+        .logobackground {
+          background-color: rgba(240, 240, 240, 0.8);
+          @include flexRow();
+          width: 100%;
+          height: 70px;
+          position: absolute;
+          bottom: 10%;
 
-        .catchphrase-container {
-            background-color: rgba(240, 240, 240, 0.8);
-            width: 100%;
-            text-align: center;
-            padding: 7px;
-       
-            .catchphrase {
-                font-family: "Playfair Display", serif;
-                font-weight: 300;
-                font-size: 1rem;
-                
-            }
-        
-    }
-
-        .button button {
-            @include shopNow();
-            display: block;
-            margin:auto;
-            margin-top:10%;
-            margin-bottom:10%;
+          .logo {
+            max-height: 100%;
+            max-width: 100%;
+          }
         }
-            .productsStartpage1, .productsStartpage2{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                margin-top: 5%; 
-                background-color: rgba(240,240,240,0.8); 
 
-                .wrapper {
-                    width: 100%;
-                    margin: 20px;
-                    display: flex;
-                    flex-wrap: wrap;
-                    flex-direction: column-reverse;
-                    align-items: center;
-                    aspect-ratio: 2/1.5;
-                    position:relative;
-        
-                 
-                    .logobackground {
-                        background-color: rgba(240,240,240,0.8);
-                        @include flexRow();
-                        width:100%;
-                        height: 70px;
-                        position:absolute;
-                        bottom: 10%;
-                       
-                    
-                        .logo {
-                            max-height: 100%;
-                            max-width: 100%;
-                          }
-                    }
-                   
-                    .product {
-                        width:100%;
-                        height: 100%;
-                        object-fit: cover;
-                  
-                }
-            }
-    
+        .product {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
-       
+      }
     }
-    
+  }
 }
