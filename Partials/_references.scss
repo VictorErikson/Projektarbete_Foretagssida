@@ -29,18 +29,15 @@ body {
     width: 100vw;
     background-color: $backgroundGrey;
 
-    .footer-hr {
-        background-color: $lightGrey;
-        border: none;
-        border-bottom: none;
-        height: 1px;
+    header .logo {
+        margin-bottom: -20px;
     }
 
     header .logoContainer {
         margin-top: 0;
         padding-top: 20px;
     }
-    header .navContainer .home {
+    header .navContainer .home, header .navContainer .aboutUs {
         color: $darkGrey;
     }
     header .navContainer .references {
@@ -172,7 +169,7 @@ body {
             background-size: cover; /* This makes the image cover the entire container */
             background-position: right; /* This centers the image */
             background-repeat: no-repeat; /* Prevents repeating the image */
-            height: 600px;
+            max-height: 600px;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -204,7 +201,7 @@ body {
                     @include desktopReferences {
                         line-height: normal;
                         margin-top: 20px;
-                        font-size: 25px;
+                        font-size: 23px;
                     }
                 }
             
@@ -230,22 +227,97 @@ body {
                         margin: 0;
                         align-self: center;
                         @include desktopReferences {
-                            margin-top: -20px;
+                    
                             font-size: 1.5rem;
                         }
                     }
                 }
                
         }
+
+        .third-box {
+            background-image: url('assets/images/references/steve-jacobson.jpg'); /* Path to the image */
+            background-size: cover; /* This makes the image cover the entire container */
+            background-position: center; /* This centers the image */
+            background-repeat: no-repeat; /* Prevents repeating the image */
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: 20px;
+            margin-bottom: 30px;
+            @include desktopReferences {
+                background-image: none;
+                justify-content: space-between;
+            }
+
+                .steve-text-box {
+                    background-color: $lightGrey;
+                    height: 98%;
+                    width: 50%;
+                    padding: 15px;
+                    @include flexColumn;
+                    justify-content: space-between;
+                    align-items: flex-start;
+                    @include desktopReferences {
+                        width: 100%;
+                        margin-left: -15px;
+                    }
+
+                    h2 {
+                        @include nameheader;
+                        @include desktopReferences {
+                            font-size: 2rem;
+                            display: inline-block;
+                        }
+                    }
+                    h3 {
+                        @include andteam;
+                        text-indent: 80px;
+                        @include desktopReferences {
+                            font-size: 1rem;
+                            display: inline-block;
+                            text-indent: 20px;
+                    
+                            
+                        }
+                    }
+                    .info-text {
+                        margin:0;
+                        font-size: $body;
+                    
+                        @include desktopReferences {
+                            line-height: normal;
+                            margin-top: 20px;
+                            font-size: 25px;
+                        }
+                    }
+                    .stars {
+                        margin: 0;
+                        align-self: center;
+                        @include desktopReferences {
+
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
         
     }
-    footer {
-        background-image: url('assets/images/references/alex-honnold.jpg'); /* Path to the image */
-        background-size: cover; /* This makes the image cover the entire container */
-        background-position: bottom; /* This centers the image */
-        background-repeat: no-repeat; /* Prevents repeating the image */
+    #footer-references {
+        background-color: $lightGrey;
         padding: 20px;
         margin-bottom: 0;
+        h2, p, .footerLink {
+            color: $darkGrey;
+        }
+        hr {
+            background-color: $darkGrey;
+            border: none;
+            border-bottom: none;
+            height: 1px;
+        }
         @include desktopReferences {
             background-image: none;
             background-color: $lightGrey;
