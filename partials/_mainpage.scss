@@ -63,12 +63,10 @@
             margin-top:10%;
             margin-bottom:10%;
         }
-        .products {
-            display: flex;
-            flex-direction: column; 
             .productsStartpage1, .productsStartpage2{
                 display: flex;
                 flex-direction: row;
+                justify-content: space-between;
                 margin-top: 5%; 
                 background-color: rgba(240,240,240,0.8); 
                 .wrapper {
@@ -76,16 +74,16 @@
                     padding: 20px;
                     display: flex;
                     flex-direction: column-reverse;
-                    // position: relative;
+                    align-items: center;
+                    position: relative;
 
                     .logobackground {
                         background-color: $lightGrey;
                         @include flexRow();
                         width: 100%;
                         height: 20px;
-                        // position:absolute;
-                        // bottom:24px;
-            
+                        position:absolute;
+                        bottom:24px;
                 
                     
                         .logo {
@@ -97,7 +95,8 @@
                     .product {
                         width:100%;
                         height: 100%;
-                        
+                        object-fit: cover;
+                  
                 }
             }
     
@@ -105,5 +104,4 @@
        
     }
     
-}
 }
