@@ -1,7 +1,9 @@
 // ADD .activeHeader classname in your header component
 
 
-
+.logo{
+    width: 70px;
+}
 
     .navContainer{
         .activeHeader{
@@ -61,14 +63,18 @@ header {
     .logoContainer {
         @include flexColumn;
         margin-top: 20px;
-        gap: 20px;
+        gap: 0px;
 
         @include desktopHeader {
             @include flexRow;
         }
 
         .logo {
-            margin-left: 10px
+            margin-top: 10px;
+            @include desktopHeader {
+                margin-top: 0px
+            }
+
         }
 
         .companyCatchphraseContainer {
