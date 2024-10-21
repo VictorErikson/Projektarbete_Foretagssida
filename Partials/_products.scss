@@ -12,38 +12,6 @@ body{
     font-family: 'Josefin Sans', sans-serif;
 }
 
-      
-
-.header.productsPage{
-    margin-bottom: 30px;
-    width: 100vw;
-    position: relative;
-    overflow-x: hidden;
-    .logoContainer{
-        margin-top: 0px;
-    }
-
-    .backgroundImg{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 300%;
-        background-size: cover; 
-        background-position: right; 
-        background-repeat: no-repeat;
-        height: 100%;
-        background-image: url('https://wallpaperaccess.com/full/686924.jpg');
-        margin-bottom: 0px;
-        // background: $backgroundGrey;
-        background-size: cover; 
-        background-position: center; 
-        background-repeat: no-repeat;
-        opacity: 0.2;
-        z-index: -1;
-    }
-};
-
-
 
 .mainProducts {
     @include flexColumn();
