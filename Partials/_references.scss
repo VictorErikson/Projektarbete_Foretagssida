@@ -7,6 +7,10 @@ body {
     overflow-x: hidden;
 }
 
+#footer-border {
+    border-bottom: 1px solid $darkGrey;
+}
+
 .info-text {
     @include info-text;
     @include desktopReferences {
@@ -28,7 +32,6 @@ body {
     min-height: 100vh;
     width: 100vw;
     background-color: $backgroundGrey;
-
 
     header .logoContainer {
         margin-top: 0;
@@ -297,28 +300,16 @@ body {
     }
     #footer-references {
         background-color: $lightGrey;
-        padding: 20px;
         margin-bottom: 0;
         h2, p, .footerLink {
             color: $darkGrey;
         }
-        hr {
-            background-color: $darkGrey;
-            border: none;
-            border-bottom: none;
-            height: 1px;
-        }
+
         @include desktopReferences {
             background-image: none;
             background-color: $lightGrey;
             h2, p, .home, .aboutUs, .contact, .references, .products {
                 color: $darkGrey;
-            }
-            .footer-hr {
-                background-color: $darkGrey;
-                border: none;
-                border-bottom: none;
-                height: 1px;
             }
         }
         .aboutUs {
