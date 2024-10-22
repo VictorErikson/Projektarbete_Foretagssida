@@ -3,7 +3,8 @@
 .containerFooter{
     .footerBottom{
         .footerLink.uppercase.activeFooter{
-        
+            color: $green;
+            font-weight: bold;
             &:hover {
                 border-bottom: 1px solid #f0f0f0;
                 transform: scale(1);
