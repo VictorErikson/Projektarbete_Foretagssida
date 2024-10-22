@@ -1,321 +1,316 @@
-
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 #footer-border {
-    border-bottom: 1px solid $darkGrey;
+  border-bottom: 1px solid $darkGrey;
 }
 
 .info-text {
-    @include info-text;
-    @include desktopReferences {
-        font-size: 1.4rem;
-        margin-top: 40px;
-    }
+  @include info-text;
+  @include desktopReferences {
+    font-size: 1.4rem;
+    margin-top: 40px;
+  }
 }
 
 #margo-text {
-    @include desktopReferences {
-        font-size: 22px;
-        
-    }
+  @include desktopReferences {
+    font-size: 22px;
+  }
 }
 #header-references {
-    @include desktopReferences {
-        background-color: $lightGrey;
-    }
+  @include desktopReferences {
+    background-color: $lightGrey;
+  }
 }
 
-// nested stuff: 
+// nested stuff:
 
 .ref-wrapper {
-    min-height: 100vh;
-    width: 100vw;
-    background-color: $backgroundGrey;
+  min-height: 100vh;
+  width: 100vw;
+  background-color: $backgroundGrey;
+  @include desktopReferences {
+    background-color: #fff;
+  }
+
+  header .logoContainer {
+    margin-top: 0;
     @include desktopReferences {
-        background-color: #fff;
+      background-color: $lightGrey;
+    }
+  }
+
+  .main-references {
+    @include flexColumn;
+    gap: 20px;
+    @include desktopReferences {
+      background-image: url("assets/images/references/alex-background.jpeg"); /* Path to the image */
+      background-size: cover; /* This makes the image cover the entire container */
+      background-position: center; /* This centers the image */
+      background-repeat: no-repeat; /* Prevents repeating the image */
+      padding: 20px;
+      margin-top: 30px;
     }
 
-    header .logoContainer {
-        margin-top: 0;
+    .stars {
+      font-size: 0.6rem;
+      color: $green;
+      text-align: center;
+      z-index: 1000;
+      margin-top: -50px;
+    }
+
+    .first-box {
+      background-image: url("assets/images/references/alex-background.jpeg"); /* Path to the image */
+      background-size: cover; /* This makes the image cover the entire container */
+      background-position: center; /* This centers the image */
+      background-repeat: no-repeat; /* Prevents repeating the image */
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      @include desktopReferences {
+        background-image: none;
+        width: 100%;
+      }
+
+      .catchphrase-container {
+        background-color: $backgroundLogo;
+        margin-top: 5%;
+        padding: 10px;
+        margin-bottom: 5%;
         @include desktopReferences {
-            background-color: $lightGrey
+          display: none;
         }
-    }
 
-    .main-references {
+        .catchphrase {
+          font-family: "Playfair Display", serif;
+          font-weight: 100;
+          font-size: 1.1rem;
+          text-align: center;
+          color: $grey;
+          @include desktopReferences {
+            display: none;
+          }
+        }
+      }
+      .alex-text-box {
+        background-color: #fff;
+        height: 70%;
+        width: 60%;
+        padding: 15px;
+        margin-left: 20px;
+        margin-bottom: 20px;
         @include flexColumn;
-        gap: 20px;
-        @include desktopReferences {
-            background-image: url('assets/images/references/alex-background.jpeg'); /* Path to the image */
-            background-size: cover; /* This makes the image cover the entire container */
-            background-position: center; /* This centers the image */
-            background-repeat: no-repeat; /* Prevents repeating the image */
-            padding: 20px;
-            margin-top: 30px;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        @include desktopAbout {
+          width: 98%;
+          margin: 40px;
+          margin-left: 0;
+          background-color: rgba(240, 240, 240, 0.87);
+          @include flexColumn;
+        }
+        .heading-box {
+          @include desktopReferences {
+            align-self: flex-start;
+          }
+        }
+
+        .info-text {
+          margin: 0;
+          margin-top: 10px;
+          font-size: $body;
+          @include desktopReferences {
+            font-size: 25px;
+            margin-top: 20px;
+          }
+        }
+
+        h2 {
+          @include nameheader;
+          @include desktopReferences {
+            font-size: 2rem;
+            display: inline-block;
+          }
+        }
+        h3 {
+          @include andteam;
+          @include desktopReferences {
+            font-size: 1rem;
+            display: inline-block;
+            text-indent: 20px;
+          }
         }
 
         .stars {
-            font-size: 0.6rem;
-            color: $green;
-            text-align: center;
-            z-index: 1000;
-            margin-top: -50px;
-            
+          margin: 0;
+          align-self: center;
+          @include desktopReferences {
+            font-size: 1.5rem;
+          }
         }
-
-        .first-box {
-            background-image: url('assets/images/references/alex-background.jpeg'); /* Path to the image */
-            background-size: cover; /* This makes the image cover the entire container */
-            background-position: center; /* This centers the image */
-            background-repeat: no-repeat; /* Prevents repeating the image */
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            @include desktopReferences {
-                background-image: none;
-                width: 100%;
-            }
-            
-            .catchphrase-container {
-                background-color: $backgroundLogo;
-                margin-top: 5%;
-                padding: 10px;
-                margin-bottom: 5%;
-                @include desktopReferences {
-                    display: none;
-                }
-                
-                    .catchphrase {
-                        font-family: "Playfair Display", serif;
-                        font-weight: 100;
-                        font-size: 1.1rem;
-                        text-align: center;
-                        color: $grey;
-                        @include desktopReferences {
-                            display: none;
-                        }
-                    }
-            }
-            .alex-text-box {
-                background-color: #fff;
-                height: 70%;
-                width: 60%;
-                padding: 15px;
-                margin-left: 20px;
-                margin-bottom: 20px;
-                @include flexColumn;
-                justify-content: space-between;
-                align-items: flex-start;
-        
-                @include desktopAbout {
-                    width: 98%;
-                    margin: 40px;
-                    margin-left: 0;
-                    background-color: rgba(240, 240, 240, 0.87);
-                    @include flexColumn;
-                }
-                    .heading-box {
-                        @include desktopReferences {
-                            align-self: flex-start;
-                        }
-                    }
-
-                    .info-text {
-                        margin:0;
-                        margin-top: 10px;
-                        font-size: $body;
-                        @include desktopReferences {
-                            font-size: 25px;
-                            margin-top: 20px;
-                        }
-                    }
-        
-                h2 {
-                    @include nameheader;
-                    @include desktopReferences {
-                        font-size: 2rem;
-                        display: inline-block;
-                    }
-                }
-                h3 {
-                    @include andteam;
-                    @include desktopReferences{
-                        font-size: 1rem;
-                        display: inline-block;
-                        text-indent: 20px;
-                    }
-
-                }
-                
-                .stars {
-                    margin: 0;
-                    align-self: center;
-                    @include desktopReferences {
-                        font-size: 1.5rem;
-                    }
-                }
-           
-                
-            }
-        }
-
-        .second-box {
-            background-image: url('assets/images/references/alex-honnold.jpg');
-            background-size: cover; 
-            background-position: right; 
-            background-repeat: no-repeat; 
-            max-height: 600px;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            @include desktopReferences {
-                background-image: none;
-                justify-content: space-between;
-            }
-        
-            .margo-text-box {
-                background-color: rgba(240, 240, 240, 0.85);
-                height: 60%;
-                width: 100%;
-                padding: 15px;
-                @include flexColumn;
-                justify-content: space-between;
-                align-items: flex-start;
-               
-                @include desktopReferences {
-                    width: 60%;
-                    height: 95%;
-                }
-
-                .info-text {
-                    margin:0;
-                    margin-top: 10px;
-                    font-size: $body;
-                    @include desktopReferences {
-                        line-height: normal;
-                        margin-top: 20px;
-                        font-size: 23px;
-                    }
-                }
-            
-                h2 {
-                    @include nameheader;
-                    @include desktopReferences {
-                        font-size: 2rem;
-                        display: inline-block;
-                    }
-                }
-                h3 {
-                    @include andteam;
-                    @include desktopReferences {
-                        font-size: 1rem;
-                        display: inline-block;
-                        text-indent: 20px;
-                
-                    }
-                }
-               
-                    .stars {
-                        margin: 0;
-                        align-self: center;
-                        @include desktopReferences {
-                    
-                            font-size: 1.5rem;
-                        }
-                    }
-                }
-               
-        }
-
-        .third-box {
-            background-image: url('assets/images/references/steve-jacobson.jpg'); /* Path to the image */
-            background-size: cover; /* This makes the image cover the entire container */
-            background-position: center; /* This centers the image */
-            background-repeat: no-repeat; /* Prevents repeating the image */
-            height: 100%;
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            padding: 20px;
-            margin-bottom: 30px;
-            @include desktopReferences {
-                background-image: none;
-                justify-content: space-between;
-            }
-
-                .steve-text-box {
-                    background-color: $lightGrey;
-                    height: 98%;
-                    width: 50%;
-                    padding: 15px;
-                    @include flexColumn;
-                    justify-content: space-between;
-                    align-items: flex-start;
-                    @include desktopReferences {
-                        width: 100%;
-                        margin-left: -15px;
-                    }
-
-                    h2 {
-                        @include nameheader;
-                        @include desktopReferences {
-                            font-size: 2rem;
-                            display: inline-block;
-                        }
-                    }
-                    h3 {
-                        @include andteam;
-                        text-indent: 80px;
-                        @include desktopReferences {
-                            font-size: 1rem;
-                            display: inline-block;
-                            text-indent: 20px;
-                    
-                        }
-                    }
-                    .info-text {
-                        margin:0;
-                        font-size: $body;
-                    
-                        @include desktopReferences {
-                            line-height: normal;
-                            margin-top: 20px;
-                            font-size: 25px;
-                        }
-                    }
-                    .stars {
-                        margin: 0;
-                        align-self: center;
-                        @include desktopReferences {
-
-                            font-size: 1.5rem;
-                        }
-                    }
-                }
-            }
-        
+      }
     }
-    #footer-references {
-        background-color: $lightGrey;
-        margin-bottom: 0;
-        h2, p, .footerLink {
-            color: $darkGrey;
-        }
+
+    .second-box {
+      background-image: url("assets/images/references/alex-honnold.jpg");
+      background-size: cover;
+      background-position: right;
+      background-repeat: no-repeat;
+      max-height: 600px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      @include desktopReferences {
+        background-image: none;
+        justify-content: space-between;
+      }
+
+      .margo-text-box {
+        background-color: rgba(240, 240, 240, 0.85);
+        height: 60%;
+        width: 100%;
+        padding: 15px;
+        @include flexColumn;
+        justify-content: space-between;
+        align-items: flex-start;
 
         @include desktopReferences {
-            background-image: none;
-            background-color: $lightGrey;
-            h2, p, .home, .aboutUs, .contact, .references, .products {
-                color: $darkGrey;
-            }
+          width: 60%;
+          height: 95%;
         }
-        .aboutUs {
-            background-color: transparent;
+
+        .info-text {
+          margin: 0;
+          margin-top: 10px;
+          font-size: $body;
+          @include desktopReferences {
+            line-height: normal;
+            margin-top: 20px;
+            font-size: 23px;
+          }
         }
+
+        h2 {
+          @include nameheader;
+          @include desktopReferences {
+            font-size: 2rem;
+            display: inline-block;
+          }
+        }
+        h3 {
+          @include andteam;
+          @include desktopReferences {
+            font-size: 1rem;
+            display: inline-block;
+            text-indent: 20px;
+          }
+        }
+
+        .stars {
+          margin: 0;
+          align-self: center;
+          @include desktopReferences {
+            font-size: 1.5rem;
+          }
+        }
+      }
     }
 
+    .third-box {
+      background-image: url("assets/images/references/steve-jacobson.jpg"); /* Path to the image */
+      background-size: cover; /* This makes the image cover the entire container */
+      background-position: center; /* This centers the image */
+      background-repeat: no-repeat; /* Prevents repeating the image */
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 20px;
+      margin-bottom: 30px;
+      @include desktopReferences {
+        background-image: none;
+        justify-content: space-between;
+      }
+
+      .steve-text-box {
+        background-color: $lightGrey;
+        height: 98%;
+        width: 50%;
+        padding: 15px;
+        @include flexColumn;
+        justify-content: space-between;
+        align-items: flex-start;
+        @include desktopReferences {
+          width: 100%;
+          margin-left: -15px;
+        }
+
+        h2 {
+          @include nameheader;
+          @include desktopReferences {
+            font-size: 2rem;
+            display: inline-block;
+          }
+        }
+        h3 {
+          @include andteam;
+          text-indent: 80px;
+          @include desktopReferences {
+            font-size: 1rem;
+            display: inline-block;
+            text-indent: 20px;
+          }
+        }
+        .info-text {
+          margin: 0;
+          font-size: $body;
+
+          @include desktopReferences {
+            line-height: normal;
+            margin-top: 20px;
+            font-size: 25px;
+          }
+        }
+        .stars {
+          margin: 0;
+          align-self: center;
+          @include desktopReferences {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+  #footer-references {
+    background-color: $lightGrey;
+    margin-bottom: 0;
+    h2,
+    p,
+    .footerLink {
+      color: $black;
+    }
+
+    @include desktopReferences {
+      background-image: none;
+      background-color: $lightGrey;
+      h2,
+      p,
+      .home,
+      .aboutUs,
+      .contact,
+      .references,
+      .products {
+        color: $black;
+      }
+    }
+    .aboutUs {
+      background-color: transparent;
+    }
+  }
 }
