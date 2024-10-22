@@ -192,7 +192,7 @@ body.contactPage{
                 .submit{
                     align-self: center;
                     
-                    @include shopNow($green, $black); 
+                    @include shopNow($green, #fff); 
                 }
                 
             }
