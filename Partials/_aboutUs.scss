@@ -1,10 +1,8 @@
-
-
 .body-aboutus {
   p {
-  font-family: 'JosefinSans', sans-serif;
-        color: $darkGrey;
-      }
+    font-family: $josefin-font;
+    color: $darkGrey;
+  }
 }
 .wrapper {
   width: 100vw;
@@ -30,12 +28,12 @@
       .history-heading {
         align-self: flex-start;
         margin-bottom: 0.5rem;
-        font-family: 'JosefinSans', sans-serif;
+        font-family: $playfair-font;
         text-transform: uppercase;
         color: $darkGrey;
       }
       .history-text {
-        font-family: 'JosefinSans', sans-serif;
+        font-family: $playfair-font;
         color: $darkGrey;
       }
     }
@@ -43,15 +41,17 @@
 
   .second-section {
     .team-text {
-      font-family: 'JosefinSans', sans-serif;
+      font-family: "JosefinSans", sans-serif;
       color: $darkGrey;
+      margin-bottom: 1.5rem;
       h2 {
         text-transform: uppercase;
+        font-size: $headingS;
       }
     }
     padding: 5%;
     background-color: #ffff;
-    margin: 7% 5%;
+    // margin: 7% 5%;
     box-sizing: border-box;
     width: auto;
     .staff {
@@ -94,6 +94,11 @@
           height: 130px;
           @include flexRow();
           margin-top: 1rem;
+          @include desktopAbout {
+            width: 280px;
+            height: 280px;
+            margin: 0.8rem;
+          }
           @include tabletAbout {
             width: 250px;
             height: 250px;
