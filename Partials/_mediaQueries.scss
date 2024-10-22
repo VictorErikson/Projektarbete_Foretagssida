@@ -23,13 +23,13 @@
 }
 
 @mixin desktopAbout {
-  @media (width > 800px) {
+  @media (width > 1130px) {
     @content;
   }
 }
 
 @mixin tabletAbout {
-  @media (width > 500px) and (width < 799px) {
+  @media (width > 500px) and (width < 1130px) {
     @content;
   }
 }
