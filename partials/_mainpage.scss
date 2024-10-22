@@ -22,6 +22,13 @@
   row-gap: 50px;
 }
 
+#products2, #products3 {
+  @include desktopAbout {
+    display: flex;
+  }
+}
+
+
 .background {
   background: url(assets/images/homePage/mountains.jpg);
   background-repeat: no-repeat;
@@ -42,6 +49,11 @@
   }
 
   main {
+    @include desktopAbout {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
     .catchphrase-container {
       background-color: $backgroundLogo;
       width: 100%;
@@ -63,16 +75,28 @@
         margin-top: 10%;
         margin-bottom: 10%;
         text-decoration: none;
+        @include desktopAbout {
+          margin: 0;
+          margin-bottom: 5%;
+          height: 30%;
+        }
       }
+      
     }
 
     .productsMain {
-      .firstrow,
+      @include desktopAbout {
+        width: 100%;
+      }
+      .firstrow, 
       .secondrow {
         @include desktopAbout {
           display: flex;
+          width: 50%;
         }
       }
+      
+
       @include desktopAbout {
         display: flex;
       }
@@ -87,6 +111,9 @@
         justify-content: center;
         margin-top: 5%;
         background-color: $backgroundLogo;
+        @include desktopAbout {
+          width: 50%;
+        }
       }
     }
 

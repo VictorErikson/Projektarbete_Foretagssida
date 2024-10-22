@@ -1,6 +1,11 @@
 
 
-
+.body-aboutus {
+  p {
+  font-family: 'JosefinSans', sans-serif;
+        color: $darkGrey;
+      }
+}
 .wrapper {
   width: 100vw;
   .first-section {
@@ -14,7 +19,7 @@
     .history {
       width: 100%;
       height: 100%;
-      background-color: rgba(240, 240, 240, 0.7);
+      background-color: rgba(255, 255, 255, 0.915);
       color: rgb(0, 0, 0);
       display: flex;
       flex-direction: column;
@@ -25,11 +30,25 @@
       .history-heading {
         align-self: flex-start;
         margin-bottom: 0.5rem;
+        font-family: 'JosefinSans', sans-serif;
+        text-transform: uppercase;
+        color: $darkGrey;
+      }
+      .history-text {
+        font-family: 'JosefinSans', sans-serif;
+        color: $darkGrey;
       }
     }
   }
 
   .second-section {
+    .team-text {
+      font-family: 'JosefinSans', sans-serif;
+      color: $darkGrey;
+      h2 {
+        text-transform: uppercase;
+      }
+    }
     padding: 5%;
     background-color: #ffff;
     margin: 7% 5%;

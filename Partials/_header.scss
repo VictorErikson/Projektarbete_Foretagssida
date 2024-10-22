@@ -62,7 +62,6 @@ header {
 
     .logoContainer {
         @include flexColumn;
-        margin-top: 20px;
         gap: 0px;
 
         @include desktopHeader {

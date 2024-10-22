@@ -21,6 +21,11 @@ body {
         
     }
 }
+#header-references {
+    @include desktopReferences {
+        background-color: $lightGrey;
+    }
+}
 
 // nested stuff: 
 
@@ -28,9 +33,15 @@ body {
     min-height: 100vh;
     width: 100vw;
     background-color: $backgroundGrey;
+    @include desktopReferences {
+        background-color: #fff;
+    }
 
     header .logoContainer {
         margin-top: 0;
+        @include desktopReferences {
+            background-color: $lightGrey
+        }
     }
 
     .main-references {
@@ -42,6 +53,7 @@ body {
             background-position: center; /* This centers the image */
             background-repeat: no-repeat; /* Prevents repeating the image */
             padding: 20px;
+            margin-top: 30px;
         }
 
         .stars {
