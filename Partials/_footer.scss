@@ -3,7 +3,8 @@
 .containerFooter{
     .footerBottom{
         .footerLink.uppercase.activeFooter{
-        
+            color: $green;
+            font-weight: bold;
             &:hover {
                 border-bottom: 1px solid #f0f0f0;
                 transform: scale(1);
@@ -12,7 +13,7 @@
 
             }
 
-            @media ( width < 480px){
+            @media ( width < 515px){
 
                 &:hover {
                     border-bottom: 1px solid rgba($color: #000000, $alpha: 0);
@@ -38,7 +39,7 @@ footer {
     z-index: 0;
     @include flexRow;
 
-    @media ( width < 480px){
+    @media ( width < 515px){
         @include flexColumn();
     }
 
@@ -47,7 +48,7 @@ footer {
         margin-right: 0px;
         margin-bottom: -10px;
 
-        @media ( width < 480px){
+        @media ( width < 515px){
             @include flexColumn();
             padding-right: 10px;
 
@@ -72,7 +73,7 @@ footer {
             border-bottom: 1px solid #f0f0f0;
             height: 50%;
             line-height: 1;
-            @media ( width < 480px){
+            @media ( width < 515px){
                 @include flexColumn();
                 padding-left: 0px;
 
@@ -86,7 +87,7 @@ footer {
                 padding-right: 20px;
                 transition-duration: 0.6s;
 
-                @media ( width < 480px){
+                @media ( width < 515px){
                     @include flexColumn();
                     padding-left: 0px;
                     line-height: 1.5;
@@ -95,7 +96,7 @@ footer {
 
                 .the{
 
-                    @media ( width < 480px){
+                    @media ( width < 515px){
                         font-size: 0.8rem;
         
                     }
@@ -110,7 +111,7 @@ footer {
                 padding-right: 20px;
                 align-self: flex-end;
 
-                @media ( width < 480px){
+                @media ( width < 515px){
                     padding: 0px;
                     padding-top: 5px;
                     align-self: center;
@@ -127,7 +128,7 @@ footer {
             
 
             
-            @media ( width < 480px){
+            @media ( width < 515px){
                 @include flexColumn();
                 padding-left: 0px;
                 margin-bottom: 10px;
@@ -150,7 +151,7 @@ footer {
                     transition-duration: 0.2s;
                 }
 
-                @media ( width < 480px){
+                @media ( width < 515px){
                     padding-bottom: 5px;
 
                     &:hover {
@@ -158,13 +159,13 @@ footer {
                         
                     }
 
-                    &:last-child{
-                        padding-bottom: 10px;
-                    }
+                    // &:last-child{
+                    //     padding-bottom: 10px;
+                    // }
 
-                    &:first-child{
-                        padding-top: 5px;
-                    }
+                    // &:first-child{
+                    //     padding-top: 5px;
+                    // }
                 }
 
             }
@@ -213,7 +214,7 @@ footer {
             a:hover{
                 border-bottom: 1px solid $black;
                 
-                @media ( width < 480px){
+                @media ( width < 515px){
                     border-bottom: 1px solid rgba($color: #000000, $alpha: 0);      
                 }
             }
