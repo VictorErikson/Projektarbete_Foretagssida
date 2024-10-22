@@ -48,7 +48,6 @@ body {
             padding: 20px;
         }
 
-
         .stars {
             font-size: 0.6rem;
             color: $green;
@@ -57,7 +56,6 @@ body {
             margin-top: -50px;
             
         }
-
 
         .first-box {
             background-image: url('assets/images/references/alex-background.jpeg'); /* Path to the image */
@@ -72,7 +70,6 @@ body {
                 width: 100%;
             }
             
-
             .catchphrase-container {
                 background-color: $backgroundLogo;
                 margin-top: 5%;
@@ -127,7 +124,6 @@ body {
                         }
                     }
         
-
                 h2 {
                     @include nameheader;
                     @include desktopReferences {
@@ -158,10 +154,10 @@ body {
         }
 
         .second-box {
-            background-image: url('assets/images/references/alex-honnold.jpg'); /* Path to the image */
-            background-size: cover; /* This makes the image cover the entire container */
-            background-position: right; /* This centers the image */
-            background-repeat: no-repeat; /* Prevents repeating the image */
+            background-image: url('assets/images/references/alex-honnold.jpg');
+            background-size: cover; 
+            background-position: right; 
+            background-repeat: no-repeat; 
             max-height: 600px;
             width: 100%;
             display: flex;
@@ -172,7 +168,6 @@ body {
                 justify-content: space-between;
             }
         
-
             .margo-text-box {
                 background-color: rgba(240, 240, 240, 0.85);
                 height: 60%;
@@ -212,7 +207,6 @@ body {
                         display: inline-block;
                         text-indent: 20px;
                 
-                        
                     }
                 }
                
@@ -273,7 +267,6 @@ body {
                             display: inline-block;
                             text-indent: 20px;
                     
-                            
                         }
                     }
                     .info-text {

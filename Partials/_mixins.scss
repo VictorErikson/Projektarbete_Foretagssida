@@ -51,13 +51,6 @@
     text-indent: 68px;
   }
 
-  @mixin q-mark() {
-    font-family: "Playfair Display", serif;
-    font-size: 4rem;
-    font-weight: 500;
-    color: $darkGrey;
-  }
-
   @mixin info-text() {
     font-family: 'JosefinSans', sans-serif;
     font-weight: 500;
