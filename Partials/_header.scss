@@ -1,7 +1,8 @@
 // ADD .activeHeader classname in your header component
-
-.logo {
-  width: 70px;
+.logoContainer, .logoContainerFooter {
+  .logo {
+    width: 70px;
+  }
 }
 
 .navContainer {
@@ -30,7 +31,7 @@
     }
 
     &:hover {
-      color: darken($green, 10%);
+      color: $green;
       transform: scale(1);
       cursor: default;
 
@@ -164,7 +165,7 @@ header {
     }
 
     a:hover {
-      color: darken($green, 10%);
+      color: $green;
       transform: scale(1.2);
       cursor: pointer;
 
