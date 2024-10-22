@@ -43,7 +43,7 @@
 
   main {
     .catchphrase-container {
-      background-color: rgba(240, 240, 240, 0.8);
+      background-color: $backgroundLogo;
       width: 100%;
       text-align: center;
       padding: 7px;
@@ -55,55 +55,69 @@
       }
     }
 
-    .button button {
-      @include shopNow();
-      display: block;
-      margin: auto;
-      margin-top: 10%;
-      margin-bottom: 10%;
-    }
-    .productsStartpage1,
-    .productsStartpage2 {
+    .button {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      margin-top: 5%;
-      background-color: rgba(240, 240, 240, 0.8);
+      a {
+        @include shopNow();
+        margin-top: 10%;
+        margin-bottom: 10%;
+        text-decoration: none;
+      }
+    }
 
+    .productsMain {
+      .firstrow,
+      .secondrow {
+        @include desktopAbout {
+          display: flex;
+        }
+      }
       @include desktopAbout {
-        flex-wrap: nowrap;
+        display: flex;
+      }
+      @include tabletAbout {
+        display: flex;
+      }
+      .productsStartpage1,
+      .productsStartpage2,
+      .productsStartpage3,
+      .productsStartpage4 {
+        display: flex;
+        justify-content: center;
+        margin-top: 5%;
+        background-color: $backgroundLogo;
+      }
+    }
+
+    .wrapper {
+      width: 100%;
+      margin: 20px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      aspect-ratio: 2/1.5;
+      position: relative;
+      padding-top: 10px;
+
+      .logobackground {
+        background-color: $backgroundLogo;
+        @include flexRow();
+        width: 100%;
+        height: 70px;
+        position: absolute;
+        bottom: 10%;
+
+        .logo {
+          max-height: 100%;
+          max-width: 100%;
+        }
       }
 
-      .wrapper {
+      .product {
         width: 100%;
-        margin: 20px;
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column-reverse;
-        align-items: center;
-        aspect-ratio: 2/1.5;
-        position: relative;
-        padding-top: 10px;
-
-        .logobackground {
-          background-color: rgba(240, 240, 240, 0.8);
-          @include flexRow();
-          width: 100%;
-          height: 70px;
-          position: absolute;
-          bottom: 10%;
-
-          .logo {
-            max-height: 100%;
-            max-width: 100%;
-          }
-        }
-
-        .product {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
+        height: 100%;
+        object-fit: cover;
       }
     }
   }
