@@ -1,200 +1,208 @@
 // ADD .activeHeader classname in your header component
 
-
-.logo{
-    width: 70px;
+.logo {
+  width: 70px;
 }
 
-.navContainer{
-    .activeHeader{
-        color: $green;
-
-        @include desktopHeader {
-            color: white;
-            background: $green;
-        }
-
-        &:hover {
-            color: $green;
-            transform: scale(1);
-            cursor: default;
-
-            @include desktopHeader {
-                color: white;
-                background: $green;
-                transform: scale(1);
-                cursor: default;    
-            }
-        }
+.navContainer {
+  .activePage {
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+    @include desktopHeader {
+      margin-right: 0px;
     }
+    .logoActive {
+      width: 30px;
+      margin-bottom: 5px;
+
+      @include desktopHeader {
+        display: none;
+      }
+    }
+  }
+  .activeHeader {
+    color: $green;
+
+    @include desktopHeader {
+      color: white;
+      background: $green;
+    }
+
+    &:hover {
+      color: darken($green, 10%);
+      transform: scale(1);
+      cursor: default;
+
+      @include desktopHeader {
+        color: white;
+        background: $green;
+        transform: scale(1);
+        cursor: default;
+      }
+    }
+  }
 }
-
-
-
-
 
 header {
-    width: 100%;
-    font-family: 'Josefin Sans', sans-serif;
-    
-   
+  width: 100%;
+  font-family: "Josefin Sans", sans-serif;
+
+  @include desktopHeader {
+    @include flexRow($justify: space-between, $align: center);
+    min-height: 100px;
+  }
+
+  span {
+    text-transform: uppercase;
+    color: $black;
+    font-weight: 400;
+  }
+
+  a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: $black;
+    font-weight: 650;
+  }
+
+  // a:first-of-type {
+  //     color: $green;
+  // }
+
+  .logoContainer {
+    @include flexColumn;
+    margin-top: 20px;
+    gap: 0px;
+
     @include desktopHeader {
-        @include flexRow($justify: space-between, $align: center);
-        min-height: 100px;
+      @include flexRow;
     }
- 
-    span {
-        text-transform: uppercase;
-        color: $darkGrey;
-        font-weight: 400;
+
+    .logo {
+      margin-top: 10px;
+      @include desktopHeader {
+        margin-top: 0px;
+      }
+    }
+
+    .companyCatchphraseContainer {
+      @include desktopHeader {
+        @include flexColumn(center, flex-start);
+      }
+      .companyName {
+        @include flexColumn;
+        gap: 10px;
+        margin-bottom: 20px;
+        @include desktopHeader {
+          @include flexRow;
+          align-items: flex-end;
+          margin-bottom: 0px;
+          padding-bottom: 0px;
+        }
+      }
+      .the {
+        font-size: 1rem;
+
+        @include desktopHeader {
+          font-size: 32px;
+          font-weight: 400;
+        }
+      }
+      .catchphrase {
+        display: none;
+
+        @include desktopHeader {
+          display: block;
+          font-family: playfair display;
+          font-weight: 400;
+          line-height: normal;
+          font-size: $headingS;
+        }
+      }
+    }
+  }
+
+  .navContainer {
+    @include flexColumn;
+    background-color: rgba(240, 240, 240, 0.6);
+    padding: 20px;
+    line-height: 12px;
+
+    @include desktopHeader {
+      @include flexRow;
+      justify-content: space-between;
+      padding: 0px;
+      background-color: transparent;
+      margin-right: 60px;
+    }
+
+    hr {
+      border: none; /* Remove default border */
+      height: 1px; /* Set height of the line */
+      background: linear-gradient(
+        to right,
+        transparent,
+        $darkGrey,
+        transparent
+      ); /* Create a gradient */
+      width: 80%; /* Set the full width */
+      margin: 10px 0px 13px 0px;
+
+      @include desktopHeader {
+        display: none;
+      }
     }
 
     a {
-        text-transform: uppercase;
-        text-decoration: none;
-        color: $darkGrey;
-        font-weight: 650;
+      transition: transform 0.3s ease-in-out;
+      @include desktopHeader {
+        margin: 0px 5px;
+        transition: transform 0.6s ease-in-out;
+        padding: 12px 10px 8px 10px;
+      }
     }
 
-    // a:first-of-type {
-    //     color: $green;
-    // }
+    a:hover {
+      color: darken($green, 10%);
+      transform: scale(1.2);
+      cursor: pointer;
 
-    .logoContainer {
-        @include flexColumn;
-        gap: 0px;
-
-        @include desktopHeader {
-            @include flexRow;
-        }
-
-        .logo {
-            margin-top: 10px;
-            @include desktopHeader {
-                margin-top: 0px
-            }
-
-        }
-
-        .companyCatchphraseContainer {
-            
-            @include desktopHeader {
-                @include flexColumn(center, flex-start);
-
-            }
-            .companyName {
-                @include flexColumn;
-                gap: 10px;
-                margin-bottom: 20px;
-                @include desktopHeader {
-                    @include flexRow;
-                    align-items: flex-end;
-                    margin-bottom: 0px;
-                    padding-bottom: 0px;
-                }
-        
-            }
-            .the {
-                font-size: 1rem;
-
-                @include desktopHeader {
-                    font-size: 32px;
-                    font-weight: 400;
-                }
-            }
-            .catchphrase {
-                display:none;
-
-                @include desktopHeader {
-                    display: block;
-                    font-family: playfair display; 
-                    font-weight: 400;
-                    line-height: normal;
-                    font-size: $headingS;
-                }
-            }
-        }
+      @include desktopHeader {
+        color: white;
+        background: darken($green, 10%);
+        transform: scale(1.1);
+      }
     }
-
-    .navContainer {
-        @include flexColumn;
-        background-color: rgba(240, 240, 240, 0.6);
-        padding: 20px;
-        line-height: 12px;
-        
-
-        @include desktopHeader {
-            @include flexRow;
-            justify-content: space-between;
-            padding: 0px;
-            background-color: transparent;
-            margin-right: 60px;
-        }
-
-        hr {
-            border: none; /* Remove default border */
-            height: 1px; /* Set height of the line */
-            background: linear-gradient(to right, transparent, $darkGrey, transparent); /* Create a gradient */
-            width: 80%; /* Set the full width */
-            margin: 10px 0px 13px 0px;
-
-            @include desktopHeader {
-                display: none;
-            }
-        }
-
-        a{
-            transition: transform 0.3s ease-in-out;
-            @include desktopHeader {
-                margin: 0px 5px;
-                transition: transform 0.6s ease-in-out;
-                padding: 12px 10px 8px 10px;
-            }
-        }
-
-        
-
-        a:hover {
-            color: lighten($green, 10%);
-            transform: scale(1.2);
-            cursor: pointer;
-
-            @include desktopHeader {
-                color: white;
-                background: lighten($green, 10%);
-                transform: scale(1.1);
-
-            }
-        }
-    }
+  }
 }
 
 // header with background image
-.backgroundHeader{
-    margin-bottom: 30px;
-    width: 100vw;
-    position: relative;
-    overflow-x: hidden;
-    .logoContainer{
-        margin-top: 0px;
-    }
+.backgroundHeader {
+  margin-bottom: 30px;
+  width: 100vw;
+  position: relative;
+  overflow-x: hidden;
+  .logoContainer {
+    margin-top: 0px;
+  }
 
-    .backgroundImg{
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 300%;
-        background-size: cover; 
-        background-position: right; 
-        background-repeat: no-repeat;
-        height: 100%;
-        background-image: url('https://wallpaperaccess.com/full/686924.jpg');
-        margin-bottom: 0px;
-        // background: $backgroundGrey;
-        background-size: cover; 
-        background-position: center; 
-        background-repeat: no-repeat;
-        opacity: 0.2;
-        z-index: -1;
-    }
-};
+  .backgroundImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%;
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-image: url("https://wallpaperaccess.com/full/686924.jpg");
+    margin-bottom: 0px;
+    // background: $backgroundGrey;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.2;
+    z-index: -1;
+  }
+}
