@@ -5,29 +5,29 @@
     width: 70px;
 }
 
-    .navContainer{
-        .activeHeader{
+.navContainer{
+    .activeHeader{
+        color: $green;
+
+        @include desktopHeader {
+            color: white;
+            background: $green;
+        }
+
+        &:hover {
             color: $green;
+            transform: scale(1);
+            cursor: default;
 
             @include desktopHeader {
                 color: white;
                 background: $green;
-            }
-
-            &:hover {
-                color: $green;
                 transform: scale(1);
-                cursor: default;
-    
-                @include desktopHeader {
-                    color: white;
-                    background: $green;
-                    transform: scale(1);
-                    cursor: default;    
-                }
+                cursor: default;    
             }
         }
     }
+}
 
 
 
