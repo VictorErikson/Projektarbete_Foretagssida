@@ -31,10 +31,14 @@
         font-family: $playfair-font;
         text-transform: uppercase;
         color: $darkGrey;
+        font-size: $headingM;
       }
       .history-text {
         font-family: $playfair-font;
         color: $darkGrey;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 2.5rem;
       }
     }
   }
@@ -42,11 +46,13 @@
   .second-section {
     .team-text {
       font-family: "JosefinSans", sans-serif;
+      font-size: 24px;
       color: $darkGrey;
       margin-bottom: 1.5rem;
+      line-height: 1.5em;
       h2 {
         text-transform: uppercase;
-        font-size: $headingS;
+        font-size: $headingM;
       }
     }
     padding: 5%;
@@ -81,7 +87,8 @@
         padding: 0.2rem;
 
         p {
-          font-size: 12px;
+          font-size: 14px;
+          font-weight: bold;
         }
 
         p:first-of-type {
