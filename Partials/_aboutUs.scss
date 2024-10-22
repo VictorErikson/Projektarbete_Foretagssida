@@ -134,11 +134,6 @@
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 hr {
   border: none;
@@ -193,7 +188,7 @@ hr {
           color: $black;
         }
         a:hover {
-          border-bottom: 1px solid $black;
+          border-bottom: 1px solid 240, 240, 240, 0;
         }
       }
     }
