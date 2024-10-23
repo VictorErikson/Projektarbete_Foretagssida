@@ -90,6 +90,7 @@
       .staff-middle,
       .staff-bottom {
         display: flex;
+        flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-evenly;
         width: 100%;
@@ -109,6 +110,25 @@
         padding: 15px;
         :hover {
           cursor: pointer;
+        }
+
+        .staff-text {
+          width: 230px;
+          background: #ffff;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          padding: 15px;
+          border-radius: 0 0 10px 10px;
+          @include desktopAbout {
+            width: 280px;
+            height: 280px;
+          }
+          @include tabletAbout {
+            width: 250px;
+            height: 250px;
+          }
         }
 
         .staff-name {
@@ -133,12 +153,13 @@
 
         .email {
           font-size: 12px;
+          font-weight: bold;
         }
 
         .img {
           overflow: hidden;
-          width: 130px;
-          height: 130px;
+          width: 230px;
+          height: 230px;
           @include flexRow();
           margin-top: 1rem;
           @include desktopAbout {
@@ -155,6 +176,7 @@
             width: 100%;
             object-fit: cover;
             object-position: center;
+            border-radius: 10px 10px 0 0;
           }
           img.mike,
           .sarah,
