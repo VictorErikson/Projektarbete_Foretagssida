@@ -89,7 +89,7 @@ body {
           font-weight: 100;
           font-size: 1.1rem;
           text-align: center;
-          color: $grey;
+          color: #000;
           @include desktopReferences {
             display: none;
           }
@@ -260,7 +260,6 @@ body {
         }
         h3 {
           @include andteam;
-          text-indent: 80px;
           @include desktopReferences {
             font-size: 1rem;
             display: inline-block;
