@@ -1,44 +1,60 @@
 .body-aboutus {
   p {
-    font-family: $josefin-font;
+    font-family: "JosefinSans", sans-serif;
     color: $darkGrey;
   }
 }
 .wrapper {
   width: 100vw;
   .first-section {
-    @include flexRow();
+    display: flex;
+    flex-direction: column;
     width: 100vw;
     background-image: url("/assets/images/About-us/Group-hiking.png");
-    padding: 7% 5%;
+    // padding: 7% 5%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    margin-top: 0px;
+
+    .catchphrase-box {
+      background-color: rgba(240, 240, 240, 0.8);
+      margin-top: 5%;
+      padding: 10px;
+      margin-bottom: 5%;
+      .catchphrase-text {
+        font-family: "Playfair Display", serif;
+        font-weight: 100;
+        font-size: 1.1rem;
+        text-align: center;
+        color: #53545b;
+      }
+    }
+
     .history {
-      width: 100%;
+      width: 90%;
       height: 100%;
       background-color: rgba(255, 255, 255, 0.915);
       color: rgb(0, 0, 0);
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       padding: 5%;
+      margin-left: 5%;
+      margin-bottom: 7%;
 
       .history-heading {
         align-self: flex-start;
-        margin-bottom: 0.5rem;
-        font-family: $playfair-font;
+        margin-bottom: 0.8rem;
+        font-family: "JosefinSans", sans-serif;
         text-transform: uppercase;
         color: $darkGrey;
-        font-size: $headingM;
+        font-size: 1.2rem;
       }
       .history-text {
-        font-family: $playfair-font;
+        font-family: "JosefinSans", sans-serif;
         color: $darkGrey;
-        font-size: 24px;
+        font-size: 1rem;
         font-weight: bold;
-        line-height: 2.5rem;
+        line-height: 1.5rem;
+        margin-bottom: 1rem;
       }
     }
   }
@@ -47,14 +63,14 @@
     // padding: 20px;
     .team-text {
       font-family: "JosefinSans", sans-serif;
-      font-size: 24px;
+      font-size: 1.2rem;
       color: $darkGrey;
       margin-bottom: 1.5rem;
       line-height: 1.5em;
       padding: 30px;
       h2 {
         text-transform: uppercase;
-        font-size: $headingM;
+        font-size: 1rem;
       }
     }
     margin: 5%;
@@ -85,20 +101,34 @@
       }
 
       .portrait {
-        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
         padding: 15px;
         :hover {
           cursor: pointer;
         }
 
-        p {
-          font-size: 12px;
+        .staff-name {
+          font-size: 13px;
           font-weight: bold;
           text-align: center;
         }
 
         p:first-of-type {
           margin-top: 0.8rem;
+        }
+
+        .staff-info {
+          margin-top: 0.4rem;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          align-items: flex-start;
+          width: 100%;
+          font-size: 12px;
         }
 
         .img {
@@ -133,7 +163,6 @@
     }
   }
 }
-
 
 hr {
   border: none;
