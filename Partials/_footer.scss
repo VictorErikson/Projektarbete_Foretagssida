@@ -50,7 +50,7 @@ footer {
 
         @media ( width < 515px){
             @include flexColumn();
-            padding-right: 10px;
+           
 
         }
     }
@@ -89,7 +89,7 @@ footer {
 
                 @media ( width < 515px){
                     @include flexColumn();
-                    padding-left: 0px;
+                    padding-left: 20px;
                     line-height: 1.5;
     
                 }
@@ -119,6 +119,8 @@ footer {
             }
         }
 
+       
+        
         .footerBottom{
             @include flexRow;
             justify-content: center;
@@ -130,7 +132,7 @@ footer {
             
             @media ( width < 515px){
                 @include flexColumn();
-                padding-left: 0px;
+                // padding-left: 0px;
                 margin-bottom: 10px;
             }
 
