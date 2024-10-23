@@ -44,19 +44,21 @@
   }
 
   .second-section {
+    // padding: 20px;
     .team-text {
       font-family: "JosefinSans", sans-serif;
       font-size: 24px;
       color: $darkGrey;
       margin-bottom: 1.5rem;
       line-height: 1.5em;
+      padding: 30px;
       h2 {
         text-transform: uppercase;
         font-size: $headingM;
       }
     }
-    padding: 5%;
-    background-color: #ffff;
+    margin: 5%;
+    background-color: $backgroundGrey;
     // margin: 7% 5%;
     box-sizing: border-box;
     width: auto;
@@ -84,11 +86,15 @@
 
       .portrait {
         width: auto;
-        padding: 0.2rem;
+        padding: 15px;
+        :hover {
+          cursor: pointer;
+        }
 
         p {
-          font-size: 14px;
+          font-size: 12px;
           font-weight: bold;
+          text-align: center;
         }
 
         p:first-of-type {
@@ -117,7 +123,9 @@
             object-position: center;
           }
           img.mike,
-          .sarah {
+          .sarah,
+          .emma,
+          .alex {
             height: 100%;
           }
         }
@@ -126,11 +134,6 @@
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 hr {
   border: none;
@@ -185,7 +188,7 @@ hr {
           color: $black;
         }
         a:hover {
-          border-bottom: 1px solid $black;
+          border-bottom: 1px solid 240, 240, 240, 0;
         }
       }
     }
